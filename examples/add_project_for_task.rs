@@ -1,0 +1,20 @@
+#![allow(unused_imports)]
+use asana::AsanaClient;
+use asana::model::*;
+#[tokio::main]
+async fn main() {
+    let client = AsanaClient::from_env();
+    let task_gid = "your task gid";
+    let response = client
+        .add_project_for_task(task_gid)
+        .data(TaskAddProjectRequest {
+            insert_after: Some("your insert after".to_owned()),
+            insert_before: Some("your insert before".to_owned()),
+            project: "your project".to_owned(),
+            section: Some("your section".to_owned()),
+        })
+        .opt_pretty(true)
+        .await
+        .unwrap();
+    println!("{:#?}", response);
+}

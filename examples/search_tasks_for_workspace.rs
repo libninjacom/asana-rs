@@ -1,0 +1,67 @@
+#![allow(unused_imports)]
+use asana::AsanaClient;
+use asana::model::*;
+#[tokio::main]
+async fn main() {
+    let client = AsanaClient::from_env();
+    let workspace_gid = "your workspace gid";
+    let response = client
+        .search_tasks_for_workspace(workspace_gid)
+        .assigned_by_any("your assigned by.any")
+        .assigned_by_not("your assigned by.not")
+        .assignee_any("your assignee.any")
+        .assignee_not("your assignee.not")
+        .commented_on_by_not("your commented on by.not")
+        .completed(true)
+        .completed_at_after(chrono::Utc::now())
+        .completed_at_before(chrono::Utc::now())
+        .completed_on(chrono::Utc::now().date_naive())
+        .completed_on_after(chrono::Utc::now().date_naive())
+        .completed_on_before(chrono::Utc::now().date_naive())
+        .created_at_after(chrono::Utc::now())
+        .created_at_before(chrono::Utc::now())
+        .created_by_any("your created by.any")
+        .created_by_not("your created by.not")
+        .created_on(chrono::Utc::now().date_naive())
+        .created_on_after(chrono::Utc::now().date_naive())
+        .created_on_before(chrono::Utc::now().date_naive())
+        .due_at_after(chrono::Utc::now())
+        .due_at_before(chrono::Utc::now())
+        .due_on(chrono::Utc::now().date_naive())
+        .due_on_after(chrono::Utc::now().date_naive())
+        .due_on_before(chrono::Utc::now().date_naive())
+        .followers_not("your followers.not")
+        .has_attachment(true)
+        .is_blocked(true)
+        .is_blocking(true)
+        .is_subtask(true)
+        .liked_by_not("your liked by.not")
+        .modified_at_after(chrono::Utc::now())
+        .modified_at_before(chrono::Utc::now())
+        .modified_on(chrono::Utc::now().date_naive())
+        .modified_on_after(chrono::Utc::now().date_naive())
+        .modified_on_before(chrono::Utc::now().date_naive())
+        .opt_fields(&["your opt fields"])
+        .opt_pretty(true)
+        .portfolios_any("your portfolios.any")
+        .projects_all("your projects.all")
+        .projects_any("your projects.any")
+        .projects_not("your projects.not")
+        .resource_subtype("your resource subtype")
+        .sections_all("your sections.all")
+        .sections_any("your sections.any")
+        .sections_not("your sections.not")
+        .sort_ascending(true)
+        .sort_by("your sort by")
+        .start_on(chrono::Utc::now().date_naive())
+        .start_on_after(chrono::Utc::now().date_naive())
+        .start_on_before(chrono::Utc::now().date_naive())
+        .tags_all("your tags.all")
+        .tags_any("your tags.any")
+        .tags_not("your tags.not")
+        .teams_any("your teams.any")
+        .text("your text")
+        .await
+        .unwrap();
+    println!("{:#?}", response);
+}

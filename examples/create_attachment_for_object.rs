@@ -1,0 +1,14 @@
+#![allow(unused_imports)]
+use asana::AsanaClient;
+use asana::model::*;
+#[tokio::main]
+async fn main() {
+    let client = AsanaClient::from_env();
+    let response = client
+        .create_attachment_for_object()
+        .opt_fields(&["your opt fields"])
+        .opt_pretty(true)
+        .await
+        .unwrap();
+    println!("{:#?}", response);
+}

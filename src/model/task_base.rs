@@ -1,7 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, Like, TaskCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskBase {
     #[serde(flatten)]
     pub task_compact: TaskCompact,

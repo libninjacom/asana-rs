@@ -31,7 +31,7 @@ Add this to your Cargo.toml:
 
 ```toml
 [dependencies]
-asana = ".."
+asana2 = ".."
 ```
 
 

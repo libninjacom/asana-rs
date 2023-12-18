@@ -3,7 +3,7 @@ use serde::{Serialize, Deserialize};
 use super::BatchRequestAction;
 use fake::Dummy;
 ///A request object for use in a batch request.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct BatchRequest {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub actions: Option<Vec<BatchRequestAction>>,

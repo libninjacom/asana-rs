@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::TagResponse;
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct CreateTagForWorkspaceResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<TagResponse>,

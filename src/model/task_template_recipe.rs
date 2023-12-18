@@ -5,7 +5,7 @@ use super::{
     UserCompact,
 };
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskTemplateRecipe {
     #[serde(flatten)]
     pub task_template_recipe_compact: TaskTemplateRecipeCompact,

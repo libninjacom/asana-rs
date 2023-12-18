@@ -40,7 +40,7 @@ be an object with the user's `id` and `type`.
 be `null`, `Event.action` will be `changed`,
 `Event.change.action` will be `added`, and `added_value` will be
 an object with the user's `id` and `type`.*/
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct EventResponse {
     ///The type of action taken on the **resource** that triggered the event.  This can be one of `changed`, `added`, `removed`, `deleted`, or `undeleted` depending on the nature of the event.
     #[serde(skip_serializing_if = "Option::is_none")]

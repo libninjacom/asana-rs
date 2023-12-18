@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::WebhookCompact;
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct WebhookResponse {
     #[serde(flatten)]
     pub webhook_compact: WebhookCompact,

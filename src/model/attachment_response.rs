@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::AttachmentBase;
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AttachmentResponse {
     #[serde(flatten)]
     pub attachment_base: AttachmentBase,

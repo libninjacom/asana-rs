@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::StatusUpdateResponse;
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetStatusResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<StatusUpdateResponse>,

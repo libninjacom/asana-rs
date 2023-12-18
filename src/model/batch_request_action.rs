@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use fake::Dummy;
 ///An action object for use in a batch request.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct BatchRequestAction {
     ///For `GET` requests, this should be a map of query parameters you would have normally passed in the URL. Options and pagination are not accepted here; put them in `options` instead. For `POST`, `PATCH`, and `PUT` methods, this should be the content you would have normally put in the data field of the body.
     #[serde(skip_serializing_if = "Option::is_none")]

@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::{Like, StatusUpdateBase, UserCompact};
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct StatusUpdateResponse {
     #[serde(flatten)]
     pub status_update_base: StatusUpdateBase,

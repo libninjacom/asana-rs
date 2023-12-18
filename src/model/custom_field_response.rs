@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::{CustomFieldBase, UserCompact};
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct CustomFieldResponse {
     #[serde(flatten)]
     pub custom_field_base: CustomFieldBase,

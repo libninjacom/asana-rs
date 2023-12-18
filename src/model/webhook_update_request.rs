@@ -1,7 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct WebhookUpdateRequest {
     ///An array of WebhookFilter objects to specify a whitelist of filters to apply to events from this webhook. If a webhook event passes any of the filters the event will be delivered; otherwise no event will be sent to the receiving server.
     #[serde(skip_serializing_if = "Option::is_none")]

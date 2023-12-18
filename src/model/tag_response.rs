@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::{TagBase, UserCompact, WorkspaceCompact};
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TagResponse {
     #[serde(flatten)]
     pub tag_base: TagBase,

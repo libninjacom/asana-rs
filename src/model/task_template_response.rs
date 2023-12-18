@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::{ProjectCompact, TaskTemplateBase, TaskTemplateRecipe, UserCompact};
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskTemplateResponse {
     #[serde(flatten)]
     pub task_template_base: TaskTemplateBase,

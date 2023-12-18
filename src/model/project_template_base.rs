@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::{DateVariableCompact, ProjectTemplateCompact, TeamCompact, TemplateRole};
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectTemplateBase {
     #[serde(flatten)]
     pub project_template_compact: ProjectTemplateCompact,

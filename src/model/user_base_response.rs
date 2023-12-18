@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::UserBase;
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct UserBaseResponse {
     #[serde(flatten)]
     pub user_base: UserBase,

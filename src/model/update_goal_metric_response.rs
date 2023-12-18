@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::GoalResponse;
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct UpdateGoalMetricResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<GoalResponse>,

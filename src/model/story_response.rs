@@ -5,7 +5,7 @@ use super::{
     StoryBase, StoryCompact, StoryResponseDates, TagCompact, TaskCompact, UserCompact,
 };
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct StoryResponse {
     #[serde(flatten)]
     pub story_base: StoryBase,

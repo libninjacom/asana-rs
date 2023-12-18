@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::TaskBase;
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskRequest {
     #[serde(flatten)]
     pub task_base: TaskBase,

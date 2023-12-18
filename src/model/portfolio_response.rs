@@ -5,7 +5,7 @@ use super::{
     ProjectTemplateCompact, UserCompact,
 };
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct PortfolioResponse {
     #[serde(flatten)]
     pub portfolio_base: PortfolioBase,

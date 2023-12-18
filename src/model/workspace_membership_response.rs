@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::{UserTaskListResponse, WorkspaceMembershipBase};
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct WorkspaceMembershipResponse {
     #[serde(flatten)]
     pub workspace_membership_base: WorkspaceMembershipBase,

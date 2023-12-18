@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use super::{GoalBase, Like, UserCompact};
 use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GoalResponse {
     #[serde(flatten)]
     pub goal_base: GoalBase,

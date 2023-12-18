@@ -2,7 +2,7 @@
 use serde::{Serialize, Deserialize};
 use fake::Dummy;
 ///A response object returned from a batch request.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct BatchResponse {
     ///The JSON body that the invoked endpoint returned.
     #[serde(skip_serializing_if = "Option::is_none")]

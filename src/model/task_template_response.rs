@@ -1,18 +1,24 @@
 
 use serde::{Serialize, Deserialize};
 use super::{ProjectCompact, TaskTemplateBase, TaskTemplateRecipe, UserCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TaskTemplateResponse {
     #[serde(flatten)]
     pub task_template_base: TaskTemplateBase,
+    ///The time at which this task template was created.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub created_at: Option<chrono::DateTime<chrono::Utc>>,
+    ///The user who created this task template.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub created_by: Option<UserCompact>,
+    ///Name of the task template.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
+    ///The project that this task template belongs to.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub project: Option<ProjectCompact>,
+    ///The configuration for the task that will be created from this template.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub template: Option<TaskTemplateRecipe>,
 }

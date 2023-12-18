@@ -1,7 +1,9 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct RemoveCustomFieldSettingRequest {
+    ///The custom field to remove from this portfolio.
     pub custom_field: String,
 }
 impl std::fmt::Display for RemoveCustomFieldSettingRequest {

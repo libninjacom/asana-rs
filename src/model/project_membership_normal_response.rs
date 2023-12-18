@@ -1,16 +1,19 @@
 
 use serde::{Serialize, Deserialize};
 use super::{ProjectCompact, ProjectMembershipBase, UserCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct ProjectMembershipNormalResponse {
     #[serde(flatten)]
     pub project_membership_base: ProjectMembershipBase,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub project: Option<ProjectCompact>,
+    ///The base type of this resource.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub resource_type: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub user: Option<UserCompact>,
+    ///Whether the member has full access or comment-only access to the project.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub write_access: Option<String>,
 }

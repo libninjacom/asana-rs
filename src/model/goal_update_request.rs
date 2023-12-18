@@ -1,10 +1,13 @@
 
 use serde::{Serialize, Deserialize};
 use super::GoalRequestBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct GoalUpdateRequest {
     #[serde(flatten)]
     pub goal_request_base: GoalRequestBase,
+    /**The current status of this goal. When the goal is open, its status can be `green`, `yellow`, and `red` to reflect "On Track", "At Risk", and "Off Track", respectively. When the goal is closed, the value can be `missed`, `achieved`, `partial`, or `dropped`.
+*Note* you can only write to this property if `metric` is set.*/
     #[serde(skip_serializing_if = "Option::is_none")]
     pub status: Option<String>,
 }

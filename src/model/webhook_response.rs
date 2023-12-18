@@ -1,18 +1,24 @@
 
 use serde::{Serialize, Deserialize};
 use super::WebhookCompact;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct WebhookResponse {
     #[serde(flatten)]
     pub webhook_compact: WebhookCompact,
+    ///The time at which this resource was created.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub created_at: Option<chrono::DateTime<chrono::Utc>>,
+    ///Whitelist of filters to apply to events from this webhook. If a webhook event passes any of the filters the event will be delivered; otherwise no event will be sent to the receiving server.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub filters: Option<Vec<serde_json::Value>>,
+    ///The timestamp when the webhook last received an error when sending an event to the target.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub last_failure_at: Option<chrono::DateTime<chrono::Utc>>,
+    ///The contents of the last error response sent to the webhook when attempting to deliver events to the target.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub last_failure_content: Option<String>,
+    ///The timestamp when the webhook last successfully sent an event to the target.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub last_success_at: Option<chrono::DateTime<chrono::Utc>>,
 }

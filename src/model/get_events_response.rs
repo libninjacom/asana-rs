@@ -1,12 +1,16 @@
 
 use serde::{Serialize, Deserialize};
 use super::EventResponse;
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+///The full record for all events that have occurred since the sync token was created.
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct GetEventsResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<Vec<EventResponse>>,
+    ///Indicates whether there are more events to pull.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub has_more: Option<bool>,
+    ///A sync token to be used with the next call to the /events endpoint.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub sync: Option<String>,
 }

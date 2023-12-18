@@ -1,14 +1,18 @@
 
 use serde::{Serialize, Deserialize};
 use super::CustomFieldBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct CustomFieldRequest {
     #[serde(flatten)]
     pub custom_field_base: CustomFieldBase,
+    ///*Allow-listed*. Instructs the API that this Custom Field is app-owned. This parameter is allow-listed to specific apps at this point in time. For apps that are not allow-listed, providing this parameter will result in a `403 Forbidden`.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub owned_by_app: Option<bool>,
+    ///*Conditional*. Only relevant for custom fields of type `people`. This array of user GIDs reflects the users to be written to a `people` custom field. Note that *write* operations will replace existing users (if any) in the custom field with the users specified in this array.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub people_value: Option<Vec<String>>,
+    ///*Create-Only* The workspace to create a custom field in.
     pub workspace: String,
 }
 impl std::fmt::Display for CustomFieldRequest {

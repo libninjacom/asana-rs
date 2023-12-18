@@ -1,14 +1,17 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectBriefBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct ProjectBriefResponse {
     #[serde(flatten)]
     pub project_brief_base: ProjectBriefBase,
+    ///A url that points directly to the object within Asana.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub permalink_url: Option<String>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub project: Option<serde_json::Value>,
+    ///[Opt In](/docs/inputoutput-options). The plain text of the project brief.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub text: Option<String>,
 }

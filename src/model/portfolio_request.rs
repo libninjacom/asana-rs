@@ -1,14 +1,18 @@
 
 use serde::{Serialize, Deserialize};
 use super::PortfolioBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct PortfolioRequest {
     #[serde(flatten)]
     pub portfolio_base: PortfolioBase,
+    ///An array of strings identifying users. These can either be the string "me", an email, or the gid of a user.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub members: Option<Vec<String>>,
+    ///True if the portfolio is public to its workspace members.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub public: Option<bool>,
+    ///Gid of an object.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub workspace: Option<String>,
 }

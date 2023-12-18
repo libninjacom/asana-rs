@@ -1,14 +1,17 @@
 
 use serde::{Serialize, Deserialize};
 use super::{ProjectCompact, SectionBase};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct SectionResponse {
     #[serde(flatten)]
     pub section_base: SectionBase,
+    ///The time at which this resource was created.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub created_at: Option<chrono::DateTime<chrono::Utc>>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub project: Option<ProjectCompact>,
+    ///*Deprecated - please use project instead*
     #[serde(skip_serializing_if = "Option::is_none")]
     pub projects: Option<Vec<ProjectCompact>>,
 }

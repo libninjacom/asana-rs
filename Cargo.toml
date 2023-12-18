@@ -1,10 +1,10 @@
 [package]
 name = "asana2"
 edition = "2021"
-version = "0.1.0"
+version = "0.2.0"
+homepage = "https://github.com/libninjacom/asana-rs"
 readme = "README.md"
 repository = "https://github.com/libninjacom/asana-rs"
-homepage = "https://github.com/libninjacom/asana-rs"
 
 [dependencies]
 futures = "0.3.25"
@@ -17,6 +17,10 @@ serde_yaml = "0.9.27"
 [dependencies.chrono]
 version = "0.4.26"
 features = ["serde"]
+
+[dependencies.fake]
+version = "2.9"
+features = ["derive", "chrono", "rust_decimal", "http", "uuid"]
 
 [dependencies.openapiv3-extended]
 version = "3.1.4"

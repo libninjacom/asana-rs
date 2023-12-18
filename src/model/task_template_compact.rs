@@ -1,10 +1,13 @@
 
 use serde::{Serialize, Deserialize};
 use super::AsanaResource;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TaskTemplateCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
+    ///Name of the task template.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
 }

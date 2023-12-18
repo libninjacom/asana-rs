@@ -1,14 +1,19 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, UserCompact, WorkspaceCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct UserTaskListCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
+    ///The name of the user task list.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
+    ///The owner of the user task list, i.e. the person whose My Tasks is represented by this resource.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub owner: Option<UserCompact>,
+    ///The workspace in which the user task list is located.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub workspace: Option<WorkspaceCompact>,
 }

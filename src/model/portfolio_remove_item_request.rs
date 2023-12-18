@@ -1,7 +1,9 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct PortfolioRemoveItemRequest {
+    ///The item to remove from the portfolio.
     pub item: String,
 }
 impl std::fmt::Display for PortfolioRemoveItemRequest {

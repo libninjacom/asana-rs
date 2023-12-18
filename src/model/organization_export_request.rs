@@ -1,7 +1,10 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+///An *organization_export* request starts a job to export the complete data of the given Organization.
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct OrganizationExportRequest {
+    ///Globally unique identifier for the workspace or organization.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub organization: Option<String>,
 }

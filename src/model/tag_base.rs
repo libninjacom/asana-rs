@@ -1,12 +1,15 @@
 
 use serde::{Serialize, Deserialize};
 use super::TagCompact;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TagBase {
     #[serde(flatten)]
     pub tag_compact: TagCompact,
+    ///Color of the tag.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub color: Option<serde_json::Value>,
+    ///Free-form textual information associated with the tag (i.e. its description).
     #[serde(skip_serializing_if = "Option::is_none")]
     pub notes: Option<String>,
 }

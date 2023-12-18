@@ -1,7 +1,9 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct AddMembersRequest {
+    ///An array of strings identifying users. These can either be the string "me", an email, or the gid of a user.
     pub members: String,
 }
 impl std::fmt::Display for AddMembersRequest {

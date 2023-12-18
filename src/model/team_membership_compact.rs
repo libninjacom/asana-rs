@@ -1,14 +1,19 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, TeamCompact, UserCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TeamMembershipCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
+    ///Describes if the user is a team admin.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub is_admin: Option<bool>,
+    ///Describes if the user is a guest in the team.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub is_guest: Option<bool>,
+    ///Describes if the user has limited access to the team.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub is_limited_access: Option<bool>,
     #[serde(skip_serializing_if = "Option::is_none")]

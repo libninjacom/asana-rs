@@ -1,10 +1,12 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectBriefBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct ProjectBriefRequest {
     #[serde(flatten)]
     pub project_brief_base: ProjectBriefBase,
+    ///The plain text of the project brief. When writing to a project brief, you can specify either `html_text` (preferred) or `text`, but not both.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub text: Option<String>,
 }

@@ -1,12 +1,30 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct ProjectDuplicateRequest {
+    /**A comma-separated list of elements that will be duplicated to the new project. Tasks are always included.
+##### Fields
+- forms
+- members
+- notes
+- task_assignee
+- task_attachments
+- task_dates
+- task_dependencies
+- task_followers
+- task_notes
+- task_projects
+- task_subtasks
+- task_tags*/
     #[serde(skip_serializing_if = "Option::is_none")]
     pub include: Option<String>,
+    ///The name of the new project.
     pub name: String,
+    ///A dictionary of options to auto-shift dates. `task_dates` must be included to use this option. Requires either `start_on` or `due_on`, but not both.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub schedule_dates: Option<serde_json::Value>,
+    ///Sets the team of the new project. If team is not defined, the new project will be in the same team as the the original project.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub team: Option<String>,
 }

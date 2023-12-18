@@ -1,7 +1,8 @@
 
 use serde::{Serialize, Deserialize};
 use super::GoalRelationshipCompact;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct GoalRelationshipBase {
     #[serde(flatten)]
     pub goal_relationship_compact: GoalRelationshipCompact,

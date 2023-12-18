@@ -1,12 +1,14 @@
 
 use serde::{Serialize, Deserialize};
 use super::CustomFieldSettingBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct CustomFieldSettingResponse {
     #[serde(flatten)]
     pub custom_field_setting_base: CustomFieldSettingBase,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub custom_field: Option<serde_json::Value>,
+    ///`is_important` is used in the Asana web application to determine if this custom field is displayed in the list/grid view of a project or portfolio.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub is_important: Option<bool>,
     #[serde(skip_serializing_if = "Option::is_none")]

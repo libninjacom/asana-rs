@@ -1,16 +1,21 @@
 
 use serde::{Serialize, Deserialize};
 use super::GoalBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct GoalRequestBase {
     #[serde(flatten)]
     pub goal_base: GoalBase,
+    ///The `gid` of a user.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub owner: Option<String>,
+    ///*Conditional*. This property is only present when the `workspace` provided is an organization.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub team: Option<String>,
+    ///The `gid` of a time period.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub time_period: Option<String>,
+    ///The `gid` of a workspace.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub workspace: Option<String>,
 }

@@ -1,7 +1,8 @@
 
 use serde::{Serialize, Deserialize};
 use super::TimePeriodCompact;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TimePeriodBase {
     #[serde(flatten)]
     pub time_period_compact: TimePeriodCompact,

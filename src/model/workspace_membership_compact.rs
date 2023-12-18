@@ -1,8 +1,10 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, UserCompact, WorkspaceCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct WorkspaceMembershipCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
     #[serde(skip_serializing_if = "Option::is_none")]

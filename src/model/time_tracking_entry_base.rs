@@ -1,10 +1,12 @@
 
 use serde::{Serialize, Deserialize};
 use super::{TaskCompact, TimeTrackingEntryCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TimeTrackingEntryBase {
     #[serde(flatten)]
     pub time_tracking_entry_compact: TimeTrackingEntryCompact,
+    ///The time at which this resource was created.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub created_at: Option<chrono::DateTime<chrono::Utc>>,
     #[serde(skip_serializing_if = "Option::is_none")]

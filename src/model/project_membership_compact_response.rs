@@ -1,12 +1,15 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectMembershipCompact;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct ProjectMembershipCompactResponse {
     #[serde(flatten)]
     pub project_membership_compact: ProjectMembershipCompact,
+    ///Type of the membership.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub resource_subtype: Option<String>,
+    ///The base type of this resource.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub resource_type: Option<String>,
 }

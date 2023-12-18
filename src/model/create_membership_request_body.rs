@@ -1,14 +1,18 @@
 
 use serde::{Serialize, Deserialize};
 use super::MembershipRequest;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct CreateMembershipRequestBody {
     #[serde(flatten)]
     pub membership_request: MembershipRequest,
+    ///The gid of the user or team
     #[serde(skip_serializing_if = "Option::is_none")]
     pub member: Option<String>,
+    ///The gid of the `goal`
     #[serde(skip_serializing_if = "Option::is_none")]
     pub parent: Option<String>,
+    ///The role given to the member. Optional argument, will default to commenter. Can be `editor` or `commenter`.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub role: Option<String>,
 }

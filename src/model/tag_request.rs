@@ -1,12 +1,15 @@
 
 use serde::{Serialize, Deserialize};
 use super::TagBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TagRequest {
     #[serde(flatten)]
     pub tag_base: TagBase,
+    ///An array of strings identifying users. These can either be the string "me", an email, or the gid of a user.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub followers: Option<Vec<String>>,
+    ///Gid of an object.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub workspace: Option<String>,
 }

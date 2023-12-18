@@ -1,10 +1,13 @@
 
 use serde::{Serialize, Deserialize};
 use super::{UserBaseResponse, WorkspaceCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct UserResponse {
     #[serde(flatten)]
     pub user_base_response: UserBaseResponse,
+    /**Workspaces and organizations this user may access.
+Note\: The API will only return workspaces and organizations that also contain the authenticated user.*/
     #[serde(skip_serializing_if = "Option::is_none")]
     pub workspaces: Option<Vec<WorkspaceCompact>>,
 }

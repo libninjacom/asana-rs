@@ -1,7 +1,8 @@
 
 use serde::{Serialize, Deserialize};
 use super::StatusUpdateBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct StatusUpdateRequest {
     #[serde(flatten)]
     pub status_update_base: StatusUpdateBase,

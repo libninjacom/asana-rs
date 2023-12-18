@@ -1,16 +1,20 @@
 
 use serde::{Serialize, Deserialize};
 use super::{CustomFieldBase, UserCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct CustomFieldResponse {
     #[serde(flatten)]
     pub custom_field_base: CustomFieldBase,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub created_by: Option<serde_json::Value>,
+    ///*Conditional*. This flag describes whether a custom field is a formula custom field.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub is_formula_field: Option<bool>,
+    ///*Conditional*. This flag describes whether a custom field is read only.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub is_value_read_only: Option<bool>,
+    ///*Conditional*. Only relevant for custom fields of type `people`. This array of [compact user](/reference/users) objects reflects the values of a `people` custom field.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub people_value: Option<Vec<UserCompact>>,
 }

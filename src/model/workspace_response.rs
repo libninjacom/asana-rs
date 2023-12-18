@@ -1,12 +1,15 @@
 
 use serde::{Serialize, Deserialize};
 use super::WorkspaceBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct WorkspaceResponse {
     #[serde(flatten)]
     pub workspace_base: WorkspaceBase,
+    ///The email domains that are associated with this workspace.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub email_domains: Option<Vec<String>>,
+    ///Whether the workspace is an *organization*.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub is_organization: Option<bool>,
 }

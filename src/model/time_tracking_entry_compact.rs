@@ -1,14 +1,18 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, UserCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TimeTrackingEntryCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub created_by: Option<UserCompact>,
+    ///Time in minutes tracked by the entry.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub duration_minutes: Option<i64>,
+    ///The day that this entry is logged on.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub entered_on: Option<chrono::NaiveDate>,
 }

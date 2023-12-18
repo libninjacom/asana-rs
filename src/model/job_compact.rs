@@ -1,8 +1,10 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, ProjectCompact, ProjectTemplateCompact};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct JobCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
     #[serde(skip_serializing_if = "Option::is_none")]
@@ -11,8 +13,10 @@ pub struct JobCompact {
     pub new_project_template: Option<ProjectTemplateCompact>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub new_task: Option<serde_json::Value>,
+    ///The subtype of this resource. Different subtypes retain many of the same fields and behavior, but may render differently in Asana or represent resources with different semantic meaning.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub resource_subtype: Option<String>,
+    ///The current status of this job. The value is one of: `not_started`, `in_progress`, `succeeded`, or `failed`.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub status: Option<String>,
 }

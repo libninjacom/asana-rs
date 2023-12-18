@@ -1,7 +1,9 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TaskAddFollowersRequest {
+    ///An array of strings identifying users. These can either be the string "me", an email, or the gid of a user.
     pub followers: Vec<String>,
 }
 impl std::fmt::Display for TaskAddFollowersRequest {

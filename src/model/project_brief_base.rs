@@ -1,12 +1,15 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectBriefCompact;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct ProjectBriefBase {
     #[serde(flatten)]
     pub project_brief_compact: ProjectBriefCompact,
+    ///HTML formatted text for the project brief.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub html_text: Option<String>,
+    ///The title of the project brief.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub title: Option<String>,
 }

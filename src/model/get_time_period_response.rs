@@ -1,7 +1,8 @@
 
 use serde::{Serialize, Deserialize};
 use super::TimePeriodResponse;
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct GetTimePeriodResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<TimePeriodResponse>,

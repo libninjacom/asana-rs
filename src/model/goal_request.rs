@@ -1,7 +1,8 @@
 
 use serde::{Serialize, Deserialize};
 use super::GoalRequestBase;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct GoalRequest {
     #[serde(flatten)]
     pub goal_request_base: GoalRequestBase,

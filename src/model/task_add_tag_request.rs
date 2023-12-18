@@ -1,7 +1,9 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TaskAddTagRequest {
+    ///The tag to add to the task.
     pub tag: String,
 }
 impl std::fmt::Display for TaskAddTagRequest {

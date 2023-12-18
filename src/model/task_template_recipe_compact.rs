@@ -1,9 +1,12 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TaskTemplateRecipeCompact {
+    ///Name of the task that will be created from this template.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
+    ///The subtype of the task that will be created from this template.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub task_resource_subtype: Option<String>,
 }

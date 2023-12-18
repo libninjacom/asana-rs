@@ -1,14 +1,18 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaNamedResource, AsanaResource};
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct WebhookCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
+    ///If true, the webhook will send events - if false it is considered inactive and will not generate events.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub active: Option<bool>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub resource: Option<AsanaNamedResource>,
+    ///The URL to receive the HTTP POST.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub target: Option<String>,
 }

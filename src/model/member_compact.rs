@@ -1,12 +1,16 @@
 
 use serde::{Serialize, Deserialize};
 use super::AsanaResource;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct MemberCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
+    ///The name of the member
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
+    ///The type of the member (team or user)
     #[serde(skip_serializing_if = "Option::is_none")]
     pub resource_type: Option<String>,
 }

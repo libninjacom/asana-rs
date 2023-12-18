@@ -1,14 +1,18 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectStatusCompact;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct ProjectStatusBase {
     #[serde(flatten)]
     pub project_status_compact: ProjectStatusCompact,
+    ///The color associated with the status update.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub color: Option<String>,
+    ///[Opt In](/docs/inputoutput-options). The text content of the status update with formatting as HTML.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub html_text: Option<String>,
+    ///The text content of the status update.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub text: Option<String>,
 }

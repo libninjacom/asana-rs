@@ -1,11 +1,15 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct DateVariableCompact {
+    ///The description of what the date variable is used for when instantiating a project.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub description: Option<String>,
+    ///Globally unique identifier of the date field in the project template. A value of `1` refers to the project start date, while `2` refers to the project due date.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub gid: Option<String>,
+    ///The name of the date variable.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
 }

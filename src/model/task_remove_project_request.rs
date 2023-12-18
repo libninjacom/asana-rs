@@ -1,7 +1,9 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct TaskRemoveProjectRequest {
+    ///The project to remove the task from.
     pub project: String,
 }
 impl std::fmt::Display for TaskRemoveProjectRequest {

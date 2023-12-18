@@ -1,7 +1,9 @@
 
 use serde::{Serialize, Deserialize};
-#[derive(Debug, Clone, Serialize, Deserialize, Default)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct RuleTriggerResponse {
+    ///Message providing more detail about the result
     #[serde(skip_serializing_if = "Option::is_none")]
     pub message: Option<String>,
 }

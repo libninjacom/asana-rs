@@ -1,12 +1,16 @@
 
 use serde::{Serialize, Deserialize};
 use super::AsanaResource;
-#[derive(Debug, Clone, Serialize, Deserialize)]
+use fake::Dummy;
+#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
 pub struct AttachmentCompact {
+    ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]
     pub asana_resource: AsanaResource,
+    ///The name of the file.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub name: Option<String>,
+    ///The service hosting the attachment. Valid values are `asana`, `dropbox`, `gdrive`, `onedrive`, `box`, `vimeo`, and `external`.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub resource_subtype: Option<String>,
 }

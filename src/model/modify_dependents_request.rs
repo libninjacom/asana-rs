@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///A set of dependent tasks.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

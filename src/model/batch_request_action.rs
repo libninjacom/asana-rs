@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///An action object for use in a batch request.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

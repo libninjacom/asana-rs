@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 /**An *event* is an object representing a change to a resource that was
 observed by an event subscription or delivered asynchronously to

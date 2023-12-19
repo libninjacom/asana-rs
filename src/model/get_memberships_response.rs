@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{MembershipCompact, NextPage};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

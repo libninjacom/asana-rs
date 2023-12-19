@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{CustomFieldResponse, ProjectCompact, TagCompact, TaskBase, UserCompact};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

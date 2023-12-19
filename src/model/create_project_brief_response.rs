@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::ProjectBriefResponse;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 /**A collection of rich text that will be displayed as a preview to another app.
 

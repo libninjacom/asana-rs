@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, ProjectCompact, ProjectTemplateCompact};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

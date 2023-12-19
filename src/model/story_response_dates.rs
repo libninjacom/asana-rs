@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///*Conditional*
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

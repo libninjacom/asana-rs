@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::AsanaNamedResource;
 ///A generic list of objects, such as those returned by the typeahead search endpoint.

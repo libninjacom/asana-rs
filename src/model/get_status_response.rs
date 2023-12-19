@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::StatusUpdateResponse;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

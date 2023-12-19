@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::ProjectMembershipCompactResponse;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

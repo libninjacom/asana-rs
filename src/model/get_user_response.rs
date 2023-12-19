@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::UserResponse;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

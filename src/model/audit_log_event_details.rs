@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///Event specific details. The schema will vary depending on the `event_type`.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

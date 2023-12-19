@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::EventResponse;
 ///The full record for all events that have occurred since the sync token was created.

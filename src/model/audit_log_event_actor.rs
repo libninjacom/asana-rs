@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///The entity that triggered the event. Will typically be a user.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

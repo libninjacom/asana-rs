@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{GoalBase, Like, UserCompact};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

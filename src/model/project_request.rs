@@ -1,5 +1,6 @@
 use serde::{Serialize, Deserialize};
 use super::ProjectBase;
+
 impl ProjectRequest {
     pub fn new(name: impl Into<String>) -> Self {
         use crate::model::ProjectCompact;

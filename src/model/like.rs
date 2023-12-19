@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::UserCompact;
 ///An object to represent a user's like.

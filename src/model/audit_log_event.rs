@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{
     AuditLogEventActor, AuditLogEventContext, AuditLogEventDetails, AuditLogEventResource,

@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{DateVariableRequest, RequestedRoleRequest};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

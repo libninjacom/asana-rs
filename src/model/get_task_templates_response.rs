@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::TaskTemplateCompact;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

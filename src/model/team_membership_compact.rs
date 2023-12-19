@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, TeamCompact, UserCompact};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

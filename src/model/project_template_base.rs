@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{DateVariableCompact, ProjectTemplateCompact, TeamCompact, TemplateRole};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

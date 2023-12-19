@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::BatchRequestAction;
 ///A request object for use in a batch request.

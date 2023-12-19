@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///The primary object that was affected by this event.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

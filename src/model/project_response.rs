@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{CustomFieldCompact, ProjectBase, UserCompact};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

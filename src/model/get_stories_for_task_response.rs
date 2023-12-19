@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{NextPage, StoryCompact};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

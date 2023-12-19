@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///A response object returned from the task count endpoint.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

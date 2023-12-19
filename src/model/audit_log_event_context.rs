@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///The context from which this event originated.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

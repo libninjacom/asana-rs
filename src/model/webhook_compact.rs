@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 use super::{AsanaNamedResource, AsanaResource};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

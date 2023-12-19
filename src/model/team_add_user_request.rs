@@ -1,4 +1,3 @@
-
 use serde::{Serialize, Deserialize};
 ///A user identification object for specification with the addUser/removeUser endpoints.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]

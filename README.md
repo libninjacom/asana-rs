@@ -39,7 +39,7 @@ asana2 = ".."
 
 
 
-* [Client Library Documentation](https://docs.rs/asana)
+* [Client Library Documentation](https://docs.rs/asana2/latest/asana/)
 
 
 You can see working examples of every API call in the `examples/` directory.

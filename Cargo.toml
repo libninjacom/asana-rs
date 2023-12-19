@@ -1,7 +1,7 @@
 [package]
 name = "asana2"
 edition = "2021"
-version = "0.9.0"
+version = "0.3.0"
 description = "Fluent OpenAPI client for Asana"
 homepage = "https://github.com/libninjacom/asana-rs"
 readme = "README.md"

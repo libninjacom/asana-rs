@@ -42,24 +42,17 @@ an object with the user's `id` and `type`.*/
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct EventResponse {
     ///The type of action taken on the **resource** that triggered the event.  This can be one of `changed`, `added`, `removed`, `deleted`, or `undeleted` depending on the nature of the event.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub action: Option<String>,
+    pub action: String,
     ///Information about the type of change that has occurred. This field is only present when the value of the property `action`, describing the action taken on the **resource**, is `changed`.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub change: Option<serde_json::Value>,
+    pub change: serde_json::Value,
     ///The timestamp when the event occurred.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub created_at: Option<chrono::DateTime<chrono::Utc>>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub parent: Option<serde_json::Value>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub resource: Option<serde_json::Value>,
+    pub created_at: chrono::DateTime<chrono::Utc>,
+    pub parent: serde_json::Value,
+    pub resource: serde_json::Value,
     ///*Deprecated: Refer to the resource_type of the resource.* The type of the resource that generated the event.
     #[serde(rename = "type")]
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub type_: Option<String>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub user: Option<serde_json::Value>,
+    pub type_: String,
+    pub user: serde_json::Value,
 }
 impl std::fmt::Display for EventResponse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

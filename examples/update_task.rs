@@ -8,8 +8,8 @@ async fn main() {
         task_base: TaskBase {
             task_compact: TaskCompact {
                 asana_resource: AsanaResource {
-                    gid: Some("your gid".to_owned()),
-                    resource_type: Some("your resource type".to_owned()),
+                    gid: "your gid".to_owned(),
+                    resource_type: "your resource type".to_owned(),
                 },
                 created_by: Some(serde_json::json!({})),
                 name: Some("your name".to_owned()),
@@ -24,14 +24,14 @@ async fn main() {
             created_at: Some(chrono::Utc::now()),
             dependencies: Some(
                 vec![
-                    AsanaResource { gid : Some("your gid".to_owned()), resource_type :
-                    Some("your resource type".to_owned()) }
+                    AsanaResource { gid : "your gid".to_owned(), resource_type :
+                    "your resource type".to_owned() }
                 ],
             ),
             dependents: Some(
                 vec![
-                    AsanaResource { gid : Some("your gid".to_owned()), resource_type :
-                    Some("your resource type".to_owned()) }
+                    AsanaResource { gid : "your gid".to_owned(), resource_type :
+                    "your resource type".to_owned() }
                 ],
             ),
             due_at: Some(chrono::Utc::now()),
@@ -40,10 +40,10 @@ async fn main() {
             hearted: Some(true),
             hearts: Some(
                 vec![
-                    Like { gid : Some("your gid".to_owned()), user : Some(UserCompact {
-                    asana_resource : AsanaResource { gid : Some("your gid".to_owned()),
-                    resource_type : Some("your resource type".to_owned()) }, name :
-                    Some("your name".to_owned()) }) }
+                    Like { gid : "your gid".to_owned(), user : UserCompact {
+                    asana_resource : AsanaResource { gid : "your gid".to_owned(),
+                    resource_type : "your resource type".to_owned() }, name :
+                    Some("your name".to_owned()) } }
                 ],
             ),
             html_notes: Some("your html notes".to_owned()),
@@ -51,10 +51,10 @@ async fn main() {
             liked: Some(true),
             likes: Some(
                 vec![
-                    Like { gid : Some("your gid".to_owned()), user : Some(UserCompact {
-                    asana_resource : AsanaResource { gid : Some("your gid".to_owned()),
-                    resource_type : Some("your resource type".to_owned()) }, name :
-                    Some("your name".to_owned()) }) }
+                    Like { gid : "your gid".to_owned(), user : UserCompact {
+                    asana_resource : AsanaResource { gid : "your gid".to_owned(),
+                    resource_type : "your resource type".to_owned() }, name :
+                    Some("your name".to_owned()) } }
                 ],
             ),
             memberships: Some(vec![serde_json::json!({})]),

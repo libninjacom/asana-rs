@@ -3,11 +3,9 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct SectionRequest {
     ///An existing section within this project after which the added section should be inserted. Cannot be provided together with insert_before.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub insert_after: Option<String>,
+    pub insert_after: String,
     ///An existing section within this project before which the added section should be inserted. Cannot be provided together with insert_after.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub insert_before: Option<String>,
+    pub insert_before: String,
     ///The text to be displayed as the section name. This cannot be an empty string.
     pub name: String,
 }

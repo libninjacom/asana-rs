@@ -8,8 +8,8 @@ async fn main() {
         portfolio_base: PortfolioBase {
             portfolio_compact: PortfolioCompact {
                 asana_resource: AsanaResource {
-                    gid: Some("your gid".to_owned()),
-                    resource_type: Some("your resource type".to_owned()),
+                    gid: "your gid".to_owned(),
+                    resource_type: "your resource type".to_owned(),
                 },
                 name: Some("your name".to_owned()),
             },

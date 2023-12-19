@@ -5,10 +5,8 @@ use super::UserCompact;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct Like {
     ///Globally unique identifier of the object, as a string.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub gid: Option<String>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub user: Option<UserCompact>,
+    pub gid: String,
+    pub user: UserCompact,
 }
 impl std::fmt::Display for Like {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

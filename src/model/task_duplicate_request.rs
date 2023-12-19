@@ -14,11 +14,9 @@ pub struct TaskDuplicateRequest {
 - projects
 - subtasks
 - tags*/
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub include: Option<String>,
+    pub include: String,
     ///The name of the new task.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub name: Option<String>,
+    pub name: String,
 }
 impl std::fmt::Display for TaskDuplicateRequest {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

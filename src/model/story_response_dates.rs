@@ -7,8 +7,7 @@ pub struct StoryResponseDates {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub due_at: Option<chrono::DateTime<chrono::Utc>>,
     ///The localized day on which this goal is due. This takes a date with format `YYYY-MM-DD`.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub due_on: Option<chrono::NaiveDate>,
+    pub due_on: chrono::NaiveDate,
     ///The day on which work for this goal begins, or null if the goal has no start date. This takes a date with `YYYY-MM-DD` format, and cannot be set unless there is an accompanying due date.
     #[serde(skip_serializing_if = "Option::is_none")]
     pub start_on: Option<chrono::NaiveDate>,

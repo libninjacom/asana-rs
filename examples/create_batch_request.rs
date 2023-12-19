@@ -5,13 +5,11 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = BatchRequest {
-        actions: Some(
-            vec![
-                BatchRequestAction { data : Some(serde_json::json!({})), method :
-                "your method".to_owned(), options : Some(serde_json::json!({})),
-                relative_path : "your relative path".to_owned() }
-            ],
-        ),
+        actions: vec![
+            BatchRequestAction { data : serde_json::json!({}), method : "your method"
+            .to_owned(), options : serde_json::json!({}), relative_path :
+            "your relative path".to_owned() }
+        ],
     };
     let response = client
         .create_batch_request(data)

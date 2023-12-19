@@ -4,8 +4,7 @@ use super::BatchRequestAction;
 ///A request object for use in a batch request.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct BatchRequest {
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub actions: Option<Vec<BatchRequestAction>>,
+    pub actions: Vec<BatchRequestAction>,
 }
 impl std::fmt::Display for BatchRequest {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

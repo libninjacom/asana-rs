@@ -8,8 +8,8 @@ async fn main() {
         goal_request_base: GoalRequestBase {
             goal_base: GoalBase {
                 asana_resource: AsanaResource {
-                    gid: Some("your gid".to_owned()),
-                    resource_type: Some("your resource type".to_owned()),
+                    gid: "your gid".to_owned(),
+                    resource_type: "your resource type".to_owned(),
                 },
                 due_on: Some("your due on".to_owned()),
                 html_notes: Some("your html notes".to_owned()),

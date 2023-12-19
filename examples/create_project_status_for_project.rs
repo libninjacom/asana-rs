@@ -7,8 +7,8 @@ async fn main() {
     let data = ProjectStatusBase {
         project_status_compact: ProjectStatusCompact {
             asana_resource: AsanaResource {
-                gid: Some("your gid".to_owned()),
-                resource_type: Some("your resource type".to_owned()),
+                gid: "your gid".to_owned(),
+                resource_type: "your resource type".to_owned(),
             },
             title: Some("your title".to_owned()),
         },

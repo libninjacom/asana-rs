@@ -5,7 +5,7 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = TeamRemoveUserRequest {
-        user: Some("your user".to_owned()),
+        user: "your user".to_owned(),
     };
     let team_gid = "your team gid";
     let response = client

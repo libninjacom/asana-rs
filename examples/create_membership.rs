@@ -6,7 +6,7 @@ async fn main() {
     let client = AsanaClient::from_env();
     let data = CreateMembershipRequestBody {
         membership_request: MembershipRequest {
-            is_active: Some(true),
+            is_active: true,
         },
         member: Some("your member".to_owned()),
         parent: Some("your parent".to_owned()),

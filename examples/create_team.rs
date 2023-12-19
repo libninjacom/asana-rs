@@ -7,8 +7,8 @@ async fn main() {
     let data = TeamRequest {
         team_base: TeamCompact {
             asana_resource: AsanaResource {
-                gid: Some("your gid".to_owned()),
-                resource_type: Some("your resource type".to_owned()),
+                gid: "your gid".to_owned(),
+                resource_type: "your resource type".to_owned(),
             },
             name: Some("your name".to_owned()),
         },

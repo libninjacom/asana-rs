@@ -4,14 +4,11 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct NextPage {
     ///Pagination offset for the request.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub offset: Option<String>,
+    pub offset: String,
     ///A relative path containing the query parameters to fetch for next_page
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub path: Option<String>,
+    pub path: String,
     ///A full uri containing the query parameters to fetch for next_page
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub uri: Option<String>,
+    pub uri: String,
 }
 impl std::fmt::Display for NextPage {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

@@ -3,11 +3,9 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct RequestedRoleRequest {
     ///Globally unique identifier of the template role in the project template.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub gid: Option<String>,
+    pub gid: String,
     ///The user id that should be assigned to the template role.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub value: Option<String>,
+    pub value: String,
 }
 impl std::fmt::Display for RequestedRoleRequest {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

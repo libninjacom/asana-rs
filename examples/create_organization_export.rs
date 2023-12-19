@@ -5,7 +5,7 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = OrganizationExportRequest {
-        organization: Some("your organization".to_owned()),
+        organization: "your organization".to_owned(),
     };
     let response = client
         .create_organization_export(data)

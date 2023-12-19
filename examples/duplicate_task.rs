@@ -5,8 +5,8 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = TaskDuplicateRequest {
-        include: Some("your include".to_owned()),
-        name: Some("your name".to_owned()),
+        include: "your include".to_owned(),
+        name: "your name".to_owned(),
     };
     let task_gid = "your task gid";
     let response = client

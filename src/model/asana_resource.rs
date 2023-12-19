@@ -4,11 +4,9 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AsanaResource {
     ///Globally unique identifier of the resource, as a string.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub gid: Option<String>,
+    pub gid: String,
     ///The base type of this resource.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub resource_type: Option<String>,
+    pub resource_type: String,
 }
 impl std::fmt::Display for AsanaResource {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

@@ -5,22 +5,17 @@ use serde::{Serialize, Deserialize};
 pub struct AuditLogEventContext {
     /**The authentication method used in the context of an API request.
 Only present if the `context_type` is `api`. Can be one of `cookie`, `oauth`, `personal_access_token`, or `service_account`.*/
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub api_authentication_method: Option<String>,
+    pub api_authentication_method: String,
     ///The IP address of the client that initiated the event, if applicable.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub client_ip_address: Option<String>,
+    pub client_ip_address: String,
     /**The type of context.
 Can be one of `web`, `desktop`, `mobile`, `asana_support`, `asana`, `email`, or `api`.*/
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub context_type: Option<String>,
+    pub context_type: String,
     /**The name of the OAuth App that initiated the event.
 Only present if the `api_authentication_method` is `oauth`.*/
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub oauth_app_name: Option<String>,
+    pub oauth_app_name: String,
     ///The user agent of the client that initiated the event, if applicable.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub user_agent: Option<String>,
+    pub user_agent: String,
 }
 impl std::fmt::Display for AuditLogEventContext {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

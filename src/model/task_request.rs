@@ -1,6 +1,16 @@
-
 use serde::{Serialize, Deserialize};
 use super::TaskBase;
+impl TaskRequest {
+    pub fn new(name: impl Into<String>) -> Self {
+        Self {
+            task_base: TaskBase {
+                name: Some(name.into()),
+                ..TaskBase::default()
+            },
+            ..Self::default()
+        }
+    }
+}
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskRequest {
     #[serde(flatten)]

@@ -7,8 +7,8 @@ async fn main() {
     let data = ProjectSaveAsTemplateRequestBody {
         name: "your name".to_owned(),
         public: true,
-        team: Some("your team".to_owned()),
-        workspace: Some("your workspace".to_owned()),
+        team: "your team".to_owned(),
+        workspace: "your workspace".to_owned(),
     };
     let project_gid = "your project gid";
     let response = client

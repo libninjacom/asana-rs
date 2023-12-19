@@ -7,7 +7,6 @@ pub mod model;
 pub mod request;
 pub use httpclient::{Error, Result, InMemoryResponseExt};
 use crate::model::*;
-
 mod serde;
 #[derive(Clone)]
 pub struct FluentRequest<'a, T> {

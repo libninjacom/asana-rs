@@ -3,11 +3,9 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct EnumOptionInsertRequest {
     ///An existing enum option within this custom field after which the new enum option should be inserted. Cannot be provided together with before_enum_option.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub after_enum_option: Option<String>,
+    pub after_enum_option: String,
     ///An existing enum option within this custom field before which the new enum option should be inserted. Cannot be provided together with after_enum_option.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub before_enum_option: Option<String>,
+    pub before_enum_option: String,
     ///The gid of the enum option to relocate.
     pub enum_option: String,
 }

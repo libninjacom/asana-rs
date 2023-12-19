@@ -7,8 +7,8 @@ async fn main() {
     let data = GoalRelationshipBase {
         goal_relationship_compact: GoalRelationshipCompact {
             asana_resource: AsanaResource {
-                gid: Some("your gid".to_owned()),
-                resource_type: Some("your resource type".to_owned()),
+                gid: "your gid".to_owned(),
+                resource_type: "your resource type".to_owned(),
             },
             contribution_weight: Some(1.0),
             resource_subtype: Some("your resource subtype".to_owned()),

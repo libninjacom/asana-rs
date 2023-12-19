@@ -5,8 +5,8 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = ProjectSectionInsertRequest {
-        after_section: Some("your after section".to_owned()),
-        before_section: Some("your before section".to_owned()),
+        after_section: "your after section".to_owned(),
+        before_section: "your before section".to_owned(),
         section: "your section".to_owned(),
     };
     let project_gid = "your project gid";

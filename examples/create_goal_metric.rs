@@ -6,8 +6,8 @@ async fn main() {
     let client = AsanaClient::from_env();
     let data = GoalMetricBase {
         asana_resource: AsanaResource {
-            gid: Some("your gid".to_owned()),
-            resource_type: Some("your resource type".to_owned()),
+            gid: "your gid".to_owned(),
+            resource_type: "your resource type".to_owned(),
         },
         currency_code: Some("your currency code".to_owned()),
         current_display_value: Some("your current display value".to_owned()),

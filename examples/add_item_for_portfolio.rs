@@ -5,8 +5,8 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = PortfolioAddItemRequest {
-        insert_after: Some("your insert after".to_owned()),
-        insert_before: Some("your insert before".to_owned()),
+        insert_after: "your insert after".to_owned(),
+        insert_before: "your insert before".to_owned(),
         item: "your item".to_owned(),
     };
     let portfolio_gid = "your portfolio gid";

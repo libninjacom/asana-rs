@@ -7,8 +7,8 @@ async fn main() {
     let data = ProjectBriefRequest {
         project_brief_base: ProjectBriefBase {
             project_brief_compact: AsanaResource {
-                gid: Some("your gid".to_owned()),
-                resource_type: Some("your resource type".to_owned()),
+                gid: "your gid".to_owned(),
+                resource_type: "your resource type".to_owned(),
             },
             html_text: Some("your html text".to_owned()),
             title: Some("your title".to_owned()),

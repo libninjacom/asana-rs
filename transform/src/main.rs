@@ -67,7 +67,7 @@ fn main() {
 
     spec["paths"]["/users"]["get"]["responses"][200].as_mapping_mut().unwrap().remove("$ref").expect("Remove wrong ref. gj asana.");
 
-    // TODO mark most fields as required. seems like the spec doesn't do that...
+    // mark most fields in operations as required.
     'outer: for (path, item) in spec["paths"].as_mapping_mut().unwrap() {
         for (method, op) in item.as_mapping_mut().unwrap() {
             let Some(req) = op.pointer_mut("requestBody/content/application~1json/schema") else { continue; };
@@ -86,6 +86,17 @@ fn main() {
             }
         }
     }
+
+    // do the same for schemas
+    for (name, schema) in spec["components"]["schemas"].as_mapping_mut().unwrap() {
+        if schema["type"] == "object" {
+            dbg!(name, &schema);
+            let Some(props) = schema.get_mut("properties") else { continue; };
+            let keys = props.as_mapping().unwrap().keys().cloned().collect::<Vec<_>>();
+            schema["required"] = keys.into();
+        }
+    }
+
     fs::write(&out_fpath, serde_yaml::to_string(&spec).unwrap()).expect("Could not write to file");
     eprintln!("Wrote to {}", out_fpath);
 }

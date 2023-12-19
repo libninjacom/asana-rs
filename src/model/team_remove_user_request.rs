@@ -4,8 +4,7 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TeamRemoveUserRequest {
     ///A string identifying a user. This can either be the string "me", an email, or the gid of a user.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub user: Option<String>,
+    pub user: String,
 }
 impl std::fmt::Display for TeamRemoveUserRequest {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

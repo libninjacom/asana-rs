@@ -5,7 +5,7 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = WebhookUpdateRequest {
-        filters: Some(vec![serde_json::json!({})]),
+        filters: vec![serde_json::json!({})],
     };
     let webhook_gid = "your webhook gid";
     let response = client

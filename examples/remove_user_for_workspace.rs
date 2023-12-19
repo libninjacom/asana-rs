@@ -5,7 +5,7 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = WorkspaceRemoveUserRequest {
-        user: Some("your user".to_owned()),
+        user: "your user".to_owned(),
     };
     let workspace_gid = "your workspace gid";
     let response = client

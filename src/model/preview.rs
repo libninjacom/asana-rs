@@ -6,29 +6,21 @@ This is read-only except for a small group of whitelisted apps.*/
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct Preview {
     ///Some fallback text to display if unable to display the full preview.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub fallback: Option<String>,
+    pub fallback: String,
     ///Text to display in the footer.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub footer: Option<String>,
+    pub footer: String,
     ///Text to display in the header.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub header: Option<String>,
+    pub header: String,
     ///Where the header will link to.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub header_link: Option<String>,
+    pub header_link: String,
     ///HTML formatted text for the body of the preview.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub html_text: Option<String>,
+    pub html_text: String,
     ///Text for the body of the preview.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub text: Option<String>,
+    pub text: String,
     ///Text to display as the title.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub title: Option<String>,
+    pub title: String,
     ///Where to title will link to.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub title_link: Option<String>,
+    pub title_link: String,
 }
 impl std::fmt::Display for Preview {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

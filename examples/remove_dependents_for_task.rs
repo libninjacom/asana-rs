@@ -5,7 +5,7 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = ModifyDependentsRequest {
-        dependents: Some(vec!["your dependents".to_owned()]),
+        dependents: vec!["your dependents".to_owned()],
     };
     let task_gid = "your task gid";
     let response = client

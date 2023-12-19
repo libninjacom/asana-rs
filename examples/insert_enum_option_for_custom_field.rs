@@ -6,8 +6,8 @@ async fn main() {
     let client = AsanaClient::from_env();
     let custom_field_gid = "your custom field gid";
     let data = EnumOptionInsertRequest {
-        after_enum_option: Some("your after enum option".to_owned()),
-        before_enum_option: Some("your before enum option".to_owned()),
+        after_enum_option: "your after enum option".to_owned(),
+        before_enum_option: "your before enum option".to_owned(),
         enum_option: "your enum option".to_owned(),
     };
     let response = client

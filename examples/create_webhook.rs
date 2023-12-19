@@ -5,7 +5,7 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = WebhookRequest {
-        filters: Some(vec![serde_json::json!({})]),
+        filters: vec![serde_json::json!({})],
         resource: "your resource".to_owned(),
         target: "your target".to_owned(),
     };

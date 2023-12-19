@@ -5,7 +5,7 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = TaskTemplateInstantiateTaskRequest {
-        name: Some("your name".to_owned()),
+        name: "your name".to_owned(),
     };
     let task_template_gid = "your task template gid";
     let response = client

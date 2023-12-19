@@ -3,11 +3,9 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectSectionInsertRequest {
     ///Insert the given section immediately after the section specified by this parameter.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub after_section: Option<String>,
+    pub after_section: String,
     ///Insert the given section immediately before the section specified by this parameter.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub before_section: Option<String>,
+    pub before_section: String,
     ///The section to reorder.
     pub section: String,
 }

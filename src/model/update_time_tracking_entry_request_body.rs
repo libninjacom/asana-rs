@@ -3,11 +3,9 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct UpdateTimeTrackingEntryRequestBody {
     ///*Optional*. Time in minutes tracked by the entry
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub duration_minutes: Option<i64>,
+    pub duration_minutes: i64,
     ///*Optional*. The day that this entry is logged on. Defaults to today if no day specified
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub entered_on: Option<chrono::NaiveDate>,
+    pub entered_on: chrono::NaiveDate,
 }
 impl std::fmt::Display for UpdateTimeTrackingEntryRequestBody {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

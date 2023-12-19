@@ -1,6 +1,20 @@
-
 use serde::{Serialize, Deserialize};
 use super::ProjectBase;
+impl ProjectRequest {
+    pub fn new(name: impl Into<String>) -> Self {
+        use crate::model::ProjectCompact;
+        Self {
+            project_base: ProjectBase {
+                project_compact: ProjectCompact {
+                    name: Some(name.into()),
+                    ..ProjectCompact::default()
+                },
+                ..ProjectBase::default()
+            },
+            ..Self::default()
+        }
+    }
+}
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectRequest {
     #[serde(flatten)]

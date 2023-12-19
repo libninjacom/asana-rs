@@ -8,8 +8,8 @@ async fn main() {
         status_update_base: StatusUpdateBase {
             status_update_compact: StatusUpdateCompact {
                 asana_resource: AsanaResource {
-                    gid: Some("your gid".to_owned()),
-                    resource_type: Some("your resource type".to_owned()),
+                    gid: "your gid".to_owned(),
+                    resource_type: "your resource type".to_owned(),
                 },
                 resource_subtype: Some("your resource subtype".to_owned()),
                 title: Some("your title".to_owned()),

@@ -16,16 +16,13 @@ pub struct ProjectDuplicateRequest {
 - task_projects
 - task_subtasks
 - task_tags*/
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub include: Option<String>,
+    pub include: String,
     ///The name of the new project.
     pub name: String,
     ///A dictionary of options to auto-shift dates. `task_dates` must be included to use this option. Requires either `start_on` or `due_on`, but not both.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub schedule_dates: Option<serde_json::Value>,
+    pub schedule_dates: serde_json::Value,
     ///Sets the team of the new project. If team is not defined, the new project will be in the same team as the the original project.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub team: Option<String>,
+    pub team: String,
 }
 impl std::fmt::Display for ProjectDuplicateRequest {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

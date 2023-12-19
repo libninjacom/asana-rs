@@ -5,10 +5,10 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = ProjectDuplicateRequest {
-        include: Some("your include".to_owned()),
+        include: "your include".to_owned(),
         name: "your name".to_owned(),
-        schedule_dates: Some(serde_json::json!({})),
-        team: Some("your team".to_owned()),
+        schedule_dates: serde_json::json!({}),
+        team: "your team".to_owned(),
     };
     let project_gid = "your project gid";
     let response = client

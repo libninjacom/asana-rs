@@ -5,22 +5,18 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = ProjectTemplateInstantiateProjectRequest {
-        is_strict: Some(true),
+        is_strict: true,
         name: "your name".to_owned(),
-        public: Some(true),
-        requested_dates: Some(
-            vec![
-                DateVariableRequest { gid : Some("your gid".to_owned()), value :
-                Some(chrono::Utc::now()) }
-            ],
-        ),
-        requested_roles: Some(
-            vec![
-                RequestedRoleRequest { gid : Some("your gid".to_owned()), value :
-                Some("your value".to_owned()) }
-            ],
-        ),
-        team: Some("your team".to_owned()),
+        public: true,
+        requested_dates: vec![
+            DateVariableRequest { gid : "your gid".to_owned(), value :
+            Some(chrono::Utc::now()) }
+        ],
+        requested_roles: vec![
+            RequestedRoleRequest { gid : "your gid".to_owned(), value : "your value"
+            .to_owned() }
+        ],
+        team: "your team".to_owned(),
     };
     let project_template_gid = "your project template gid";
     let response = client

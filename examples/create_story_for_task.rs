@@ -6,8 +6,8 @@ async fn main() {
     let client = AsanaClient::from_env();
     let data = StoryBase {
         asana_resource: AsanaResource {
-            gid: Some("your gid".to_owned()),
-            resource_type: Some("your resource type".to_owned()),
+            gid: "your gid".to_owned(),
+            resource_type: "your resource type".to_owned(),
         },
         created_at: Some(chrono::Utc::now()),
         html_text: Some("your html text".to_owned()),

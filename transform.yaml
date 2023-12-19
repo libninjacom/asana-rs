@@ -908,6 +908,9 @@ components:
       type: object
       required:
       - custom_field
+      - is_important
+      - insert_before
+      - insert_after
       properties:
         custom_field:
           description: The custom field to associate with this container.
@@ -968,6 +971,9 @@ components:
           readOnly: true
           example: task
           x-insert-after: gid
+      required:
+      - gid
+      - resource_type
     AttachmentBase:
       $ref: '#/components/schemas/AttachmentCompact'
     AttachmentCompact:
@@ -990,7 +996,12 @@ components:
     AttachmentRequest:
       type: object
       required:
+      - resource_subtype
+      - file
       - parent
+      - url
+      - name
+      - connect_to_app
       properties:
         resource_subtype:
           description: |
@@ -1120,6 +1131,15 @@ components:
           $ref: '#/components/schemas/AuditLogEventDetails'
         context:
           $ref: '#/components/schemas/AuditLogEventContext'
+      required:
+      - gid
+      - created_at
+      - event_type
+      - event_category
+      - actor
+      - resource
+      - details
+      - context
     AuditLogEventActor:
       description: The entity that triggered the event. Will typically be a user.
       type: object
@@ -1148,6 +1168,11 @@ components:
           description: The email of the actor, if it is a user.
           type: string
           example: gregsanchez@example.com
+      required:
+      - actor_type
+      - gid
+      - name
+      - email
     AuditLogEventContext:
       description: The context from which this event originated.
       type: object
@@ -1189,6 +1214,12 @@ components:
             The name of the OAuth App that initiated the event.
             Only present if the `api_authentication_method` is `oauth`.
           type: string
+      required:
+      - context_type
+      - api_authentication_method
+      - client_ip_address
+      - user_agent
+      - oauth_app_name
     AuditLogEventDetails:
       description: Event specific details. The schema will vary depending on the `event_type`.
       type: object
@@ -1216,6 +1247,12 @@ components:
         email:
           description: The email of the resource, if applicable.
           type: string
+      required:
+      - resource_type
+      - resource_subtype
+      - gid
+      - name
+      - email
     BatchRequest:
       description: A request object for use in a batch request.
       type: object
@@ -1224,6 +1261,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/BatchRequestAction'
+      required:
+      - actions
     BatchRequestAction:
       description: An action object for use in a batch request.
       type: object
@@ -1280,6 +1319,8 @@ components:
       required:
       - relative_path
       - method
+      - data
+      - options
     BatchResponse:
       description: A response object returned from a batch request.
       type: object
@@ -1302,6 +1343,10 @@ components:
               completed: false
               name: Hello, world!
               notes: How are you today?
+      required:
+      - status_code
+      - headers
+      - body
     CustomFieldBase:
       allOf:
       - $ref: '#/components/schemas/CustomFieldCompact'
@@ -1721,6 +1766,8 @@ components:
       type: object
       required:
       - enum_option
+      - before_enum_option
+      - after_enum_option
       properties:
         enum_option:
           type: string
@@ -1765,6 +1812,10 @@ components:
           readOnly: true
           description: '*500 errors only*. A unique error phrase which can be used when contacting developer support to help identify the exact occurrence of the problem in Asana’s logs.'
           example: 6 sad squid snuggle softly
+      required:
+      - message
+      - help
+      - phrase
     ErrorResponse:
       description: |-
         Sadly, sometimes requests to the API are not successful. Failures can
@@ -1785,6 +1836,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Error'
+      required:
+      - errors
     EventResponse:
       description: |-
         An *event* is an object representing a change to a resource that was
@@ -1886,10 +1939,20 @@ components:
               example:
                 gid: '12345'
                 resource_type: user
+      required:
+      - user
+      - resource
+      - type
+      - action
+      - parent
+      - created_at
+      - change
     GoalAddSubgoalRequest:
       type: object
       required:
       - subgoal
+      - insert_before
+      - insert_after
       properties:
         subgoal:
           description: The goal gid to add as subgoal to a parent goal
@@ -2036,6 +2099,9 @@ components:
       type: object
       required:
       - supporting_resource
+      - insert_before
+      - insert_after
+      - contribution_weight
       properties:
         supporting_resource:
           description: The gid of the supporting resource to add to the parent goal. Must be the gid of a goal, project, task, or portfolio.
@@ -2278,6 +2344,9 @@ components:
           example: '12345'
         user:
           $ref: '#/components/schemas/UserCompact'
+      required:
+      - gid
+      - user
     MemberCompact:
       allOf:
       - $ref: '#/components/schemas/AsanaResource'
@@ -2310,6 +2379,8 @@ components:
         dependencies:
         - '133713'
         - '184253'
+      required:
+      - dependencies
     ModifyDependentsRequest:
       description: A set of dependent tasks.
       type: object
@@ -2323,6 +2394,8 @@ components:
         dependents:
         - '133713'
         - '184253'
+      required:
+      - dependents
     NextPage:
       type: object
       nullable: true
@@ -2344,6 +2417,10 @@ components:
           readOnly: true
           description: A full uri containing the query parameters to fetch for next_page
           example: https://app.asana.com/api/1.0/tasks/12345/attachments?limit=2&offset=eyJ0eXAiOJiKV1iQLCJhbGciOiJIUzI1NiJ9
+      required:
+      - offset
+      - path
+      - uri
     OrganizationExportBase:
       $ref: '#/components/schemas/OrganizationExportCompact'
     OrganizationExportCompact:
@@ -2395,12 +2472,16 @@ components:
           description: Globally unique identifier for the workspace or organization.
           type: string
           example: '1331'
+      required:
+      - organization
     OrganizationExportResponse:
       $ref: '#/components/schemas/OrganizationExportBase'
     PortfolioAddItemRequest:
       type: object
       required:
       - item
+      - insert_before
+      - insert_after
       properties:
         item:
           description: The item to add to the portfolio.
@@ -2612,6 +2693,15 @@ components:
           description: Where to title will link to.
           type: string
           example: https://asana.slack.com/archives/ABCDEFG/12345678
+      required:
+      - fallback
+      - footer
+      - header
+      - header_link
+      - html_text
+      - text
+      - title
+      - title_link
     ProjectBase:
       allOf:
       - $ref: '#/components/schemas/ProjectCompact'
@@ -2811,6 +2901,9 @@ components:
       type: object
       required:
       - name
+      - team
+      - include
+      - schedule_dates
       properties:
         name:
           description: The name of the new project.
@@ -3101,6 +3194,8 @@ components:
           example: '987654'
       required:
       - section
+      - before_section
+      - after_section
     ProjectStatusBase:
       allOf:
       - $ref: '#/components/schemas/ProjectStatusCompact'
@@ -3243,6 +3338,11 @@ components:
       type: object
       required:
       - name
+      - team
+      - public
+      - is_strict
+      - requested_dates
+      - requested_roles
       properties:
         name:
           description: The name of the new project.
@@ -3288,6 +3388,10 @@ components:
           type: string
           readOnly: true
           example: Choose a start date for your project.
+      required:
+      - gid
+      - name
+      - description
     DateVariableRequest:
       type: object
       properties:
@@ -3301,6 +3405,9 @@ components:
           nullable: true
           format: date-time
           example: 2022-01-01
+      required:
+      - gid
+      - value
     RequestedRoleRequest:
       type: object
       properties:
@@ -3312,6 +3419,9 @@ components:
           description: The user id that should be assigned to the template role.
           type: string
           example: '123'
+      required:
+      - gid
+      - value
     CreateMembershipRequestBody:
       allOf:
       - $ref: '#/components/schemas/MembershipRequest'
@@ -3353,6 +3463,8 @@ components:
           description: Message providing more detail about the result
           type: string
           example: Successfully saved the payload and ran the rule
+      required:
+      - message
     RemoveCustomFieldSettingRequest:
       type: object
       required:
@@ -3411,6 +3523,8 @@ components:
           example: '987654'
       required:
       - name
+      - insert_before
+      - insert_after
     SectionResponse:
       allOf:
       - $ref: '#/components/schemas/SectionBase'
@@ -3447,6 +3561,8 @@ components:
           example: '987654'
       required:
       - task
+      - insert_before
+      - insert_after
     StatusUpdateBase:
       allOf:
       - $ref: '#/components/schemas/StatusUpdateCompact'
@@ -3905,6 +4021,10 @@ components:
           type: string
           format: date
           example: 2019-09-15
+      required:
+      - start_on
+      - due_at
+      - due_on
     TagBase:
       allOf:
       - $ref: '#/components/schemas/TagCompact'
@@ -4043,6 +4163,9 @@ components:
           example: '987654'
       required:
       - project
+      - insert_after
+      - insert_before
+      - section
     TaskAddTagRequest:
       type: object
       properties:
@@ -4439,6 +4562,13 @@ components:
           description: The number of completed milestones in a project.
           type: integer
           example: 3
+      required:
+      - num_tasks
+      - num_incomplete_tasks
+      - num_completed_tasks
+      - num_milestones
+      - num_incomplete_milestones
+      - num_completed_milestones
     TaskDuplicateRequest:
       type: object
       properties:
@@ -4464,6 +4594,9 @@ components:
           pattern: ([notes|assignee|subtasks|attachments|tags|followers|projects|dates|dependencies|parent])(,\1)*
           example:
           - notes,assignee,subtasks,attachments,tags,followers,projects,dates,dependencies,parent
+      required:
+      - name
+      - include
     TaskRemoveFollowersRequest:
       type: object
       properties:
@@ -4502,6 +4635,8 @@ components:
           description: The name of the new task. If not provided, the name of the task template will be used.
           type: string
           example: New Task
+      required:
+      - name
     TaskRequest:
       allOf:
       - $ref: '#/components/schemas/TaskBase'
@@ -4646,6 +4781,8 @@ components:
           example: '124816'
       required:
       - parent
+      - insert_after
+      - insert_before
     TeamAddUserRequest:
       type: object
       description: A user identification object for specification with the addUser/removeUser endpoints.
@@ -4654,6 +4791,8 @@ components:
           description: A string identifying a user. This can either be the string "me", an email, or the gid of a user.
           type: string
           example: '12345'
+      required:
+      - user
     TeamBase:
       $ref: '#/components/schemas/TeamCompact'
     TeamCompact:
@@ -4705,6 +4844,8 @@ components:
           description: A string identifying a user. This can either be the string "me", an email, or the gid of a user.
           type: string
           example: '12345'
+      required:
+      - user
     TeamRequest:
       allOf:
       - $ref: '#/components/schemas/TeamBase'
@@ -5059,6 +5200,11 @@ components:
           - due_at
           - due_on
           - dependencies
+      required:
+      - resource_type
+      - resource_subtype
+      - action
+      - fields
     WebhookRequest:
       type: object
       properties:
@@ -5082,6 +5228,7 @@ components:
       required:
       - resource
       - target
+      - filters
     WebhookResponse:
       allOf:
       - $ref: '#/components/schemas/WebhookCompact'
@@ -5129,6 +5276,8 @@ components:
             - $ref: '#/components/schemas/WebhookFilter'
             - description: A set of filters to specify a whitelist for what types of events will be delivered.
             - type: object
+      required:
+      - filters
     WorkspaceAddUserRequest:
       type: object
       description: A user identification object for specification with the addUser/removeUser endpoints.
@@ -5137,6 +5286,8 @@ components:
           description: A string identifying a user. This can either be the string "me", an email, or the gid of a user.
           type: string
           example: '12345'
+      required:
+      - user
     WorkspaceBase:
       $ref: '#/components/schemas/WorkspaceCompact'
     WorkspaceCompact:
@@ -5217,6 +5368,8 @@ components:
           description: A string identifying a user. This can either be the string "me", an email, or the gid of a user.
           type: string
           example: '12345'
+      required:
+      - user
     WorkspaceRequest:
       $ref: '#/components/schemas/WorkspaceBase'
     WorkspaceResponse:
@@ -5313,6 +5466,8 @@ components:
           description: The role given to the member. Can be `editor` or `commenter`.
           type: string
           example: editor
+      required:
+      - role
     MembershipRequest:
       type: object
       properties:
@@ -5320,6 +5475,8 @@ components:
           description: '*Optional*. Denotes if a member is active. Applies to all memberships'
           type: boolean
           example: true
+      required:
+      - is_active
     TimeTrackingEntryBase:
       allOf:
       - $ref: '#/components/schemas/TimeTrackingEntryCompact'
@@ -5350,10 +5507,15 @@ components:
           type: string
           format: date
           example: 2023-03-19
+      required:
+      - duration_minutes
+      - entered_on
     ProjectSaveAsTemplateRequestBody:
       type: object
       required:
       - name
+      - team
+      - workspace
       - public
       properties:
         name:
@@ -5401,6 +5563,9 @@ components:
           type: string
           format: date
           example: 2023-03-19
+      required:
+      - duration_minutes
+      - entered_on
   securitySchemes:
     personalAccessToken:
       type: http

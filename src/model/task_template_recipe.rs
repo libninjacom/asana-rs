@@ -4,7 +4,6 @@ use super::{
     AttachmentCompact, CustomFieldCompact, ProjectCompact, TaskTemplateRecipeCompact,
     UserCompact,
 };
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskTemplateRecipe {
     #[serde(flatten)]

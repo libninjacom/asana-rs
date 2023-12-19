@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::StoryResponse;
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetStoryResponse {
     #[serde(skip_serializing_if = "Option::is_none")]

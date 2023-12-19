@@ -9,17 +9,13 @@ use crate::AsanaClient;
 On request success, this will return a [`CreateSubtaskForTaskResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CreateSubtaskForTaskRequest {
-    pub data: Option<TaskRequest>,
+    pub data: TaskRequest,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
     pub task_gid: String,
 }
 impl CreateSubtaskForTaskRequest {}
 impl FluentRequest<'_, CreateSubtaskForTaskRequest> {
-    pub fn data(mut self, data: TaskRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -45,9 +41,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, CreateSubtaskForTaskReq
                 "/tasks/{task_gid}/subtasks", task_gid = self.params.task_gid
             );
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

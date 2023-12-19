@@ -1,11 +1,9 @@
 
 use serde::{Serialize, Deserialize};
 use super::TeamMembershipResponse;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AddUserForTeamResponse {
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub data: Option<TeamMembershipResponse>,
+    pub data: TeamMembershipResponse,
 }
 impl std::fmt::Display for AddUserForTeamResponse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

@@ -1,6 +1,5 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///An action object for use in a batch request.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct BatchRequestAction {

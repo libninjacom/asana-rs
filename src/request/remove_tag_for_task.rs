@@ -9,16 +9,12 @@ use crate::AsanaClient;
 On request success, this will return a [`RemoveTagForTaskResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct RemoveTagForTaskRequest {
-    pub data: Option<TaskRemoveTagRequest>,
+    pub data: TaskRemoveTagRequest,
     pub opt_pretty: Option<bool>,
     pub task_gid: String,
 }
 impl RemoveTagForTaskRequest {}
 impl FluentRequest<'_, RemoveTagForTaskRequest> {
-    pub fn data(mut self, data: TaskRemoveTagRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_pretty(mut self, opt_pretty: bool) -> Self {
         self.params.opt_pretty = Some(opt_pretty);
         self
@@ -33,9 +29,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, RemoveTagForTaskRequest
                 "/tasks/{task_gid}/removeTag", task_gid = self.params.task_gid
             );
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_pretty {
                 r = r.query("opt_pretty", &unwrapped.to_string());
             }

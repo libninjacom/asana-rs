@@ -4,12 +4,12 @@ use asana::model::*;
 #[tokio::main]
 async fn main() {
     let client = AsanaClient::from_env();
+    let data = TaskAddFollowersRequest {
+        followers: vec!["your followers".to_owned()],
+    };
     let goal_gid = "your goal gid";
     let response = client
-        .add_followers(goal_gid)
-        .data(TaskAddFollowersRequest {
-            followers: vec!["your followers".to_owned()],
-        })
+        .add_followers(data, goal_gid)
         .opt_fields(&["your opt fields"])
         .opt_pretty(true)
         .await

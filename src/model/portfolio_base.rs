@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::PortfolioCompact;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct PortfolioBase {
     #[serde(flatten)]
     pub portfolio_compact: PortfolioCompact,

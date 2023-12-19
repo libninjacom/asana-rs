@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectBase;
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectRequest {
     #[serde(flatten)]

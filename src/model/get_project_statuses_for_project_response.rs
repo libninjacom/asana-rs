@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::{NextPage, ProjectStatusCompact};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetProjectStatusesForProjectResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<Vec<ProjectStatusCompact>>,

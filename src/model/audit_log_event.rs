@@ -3,11 +3,10 @@ use serde::{Serialize, Deserialize};
 use super::{
     AuditLogEventActor, AuditLogEventContext, AuditLogEventDetails, AuditLogEventResource,
 };
-use fake::Dummy;
 /**An object representing a single event within an Asana domain.
 
 Every audit log event is comprised of an `event_type`, `actor`, `resource`, and `context`. Some events will include additional metadata about the event under `details`. See our [currently supported list of events](/docs/audit-log-events#supported-audit-log-events) for more details.*/
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AuditLogEvent {
     ///The entity that triggered the event. Will typically be a user.
     #[serde(skip_serializing_if = "Option::is_none")]

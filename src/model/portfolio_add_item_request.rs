@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct PortfolioAddItemRequest {
     ///An id of an item in this portfolio. The new item will be added after the one specified here. `insert_before` and `insert_after` parameters cannot both be specified.
     #[serde(skip_serializing_if = "Option::is_none")]

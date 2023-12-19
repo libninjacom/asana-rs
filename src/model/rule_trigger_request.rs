@@ -1,6 +1,5 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct RuleTriggerRequest {
     ///The dynamic keys and values of the request. These fields are intended to be used in the action for the rule associated with this trigger.

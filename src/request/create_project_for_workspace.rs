@@ -9,17 +9,13 @@ use crate::AsanaClient;
 On request success, this will return a [`CreateProjectForWorkspaceResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CreateProjectForWorkspaceRequest {
-    pub data: Option<ProjectRequest>,
+    pub data: ProjectRequest,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
     pub workspace_gid: String,
 }
 impl CreateProjectForWorkspaceRequest {}
 impl FluentRequest<'_, CreateProjectForWorkspaceRequest> {
-    pub fn data(mut self, data: ProjectRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -47,9 +43,7 @@ for FluentRequest<'a, CreateProjectForWorkspaceRequest> {
                 .workspace_gid
             );
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

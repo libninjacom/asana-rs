@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, MemberCompact, ProjectCompact};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectMembershipCompact {
     ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]

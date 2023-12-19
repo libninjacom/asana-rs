@@ -9,16 +9,12 @@ use crate::AsanaClient;
 On request success, this will return a [`CreateOrganizationExportResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CreateOrganizationExportRequest {
-    pub data: Option<OrganizationExportRequest>,
+    pub data: OrganizationExportRequest,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
 }
 impl CreateOrganizationExportRequest {}
 impl FluentRequest<'_, CreateOrganizationExportRequest> {
-    pub fn data(mut self, data: OrganizationExportRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -43,9 +39,7 @@ for FluentRequest<'a, CreateOrganizationExportRequest> {
         Box::pin(async move {
             let url = "/organization_exports";
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

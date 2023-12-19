@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///The context from which this event originated.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AuditLogEventContext {
     /**The authentication method used in the context of an API request.
 Only present if the `context_type` is `api`. Can be one of `cookie`, `oauth`, `personal_access_token`, or `service_account`.*/

@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaNamedResource, AsanaResource};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct WebhookCompact {
     ///A generic Asana Resource, containing a globally unique identifier.
     #[serde(flatten)]

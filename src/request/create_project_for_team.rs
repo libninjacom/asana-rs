@@ -9,17 +9,13 @@ use crate::AsanaClient;
 On request success, this will return a [`CreateProjectForTeamResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CreateProjectForTeamRequest {
-    pub data: Option<ProjectRequest>,
+    pub data: ProjectRequest,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
     pub team_gid: String,
 }
 impl CreateProjectForTeamRequest {}
 impl FluentRequest<'_, CreateProjectForTeamRequest> {
-    pub fn data(mut self, data: ProjectRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -45,9 +41,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, CreateProjectForTeamReq
                 "/teams/{team_gid}/projects", team_gid = self.params.team_gid
             );
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

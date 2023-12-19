@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::EnumOptionBase;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct EnumOptionRequest {
     #[serde(flatten)]
     pub enum_option_base: EnumOptionBase,

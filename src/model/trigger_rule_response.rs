@@ -1,11 +1,9 @@
 
 use serde::{Serialize, Deserialize};
 use super::RuleTriggerResponse;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TriggerRuleResponse {
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub data: Option<RuleTriggerResponse>,
+    pub data: RuleTriggerResponse,
 }
 impl std::fmt::Display for TriggerRuleResponse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

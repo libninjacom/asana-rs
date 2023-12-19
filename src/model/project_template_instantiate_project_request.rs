@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::{DateVariableRequest, RequestedRoleRequest};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectTemplateInstantiateProjectRequest {
     ///*Optional*. If set to `true`, the endpoint returns an "Unprocessable Entity" error if you fail to provide a calendar date value for any date variable. If set to `false`, a default date is used for each unfulfilled date variable (e.g., the current date is used as the Start Date of a project).
     #[serde(skip_serializing_if = "Option::is_none")]

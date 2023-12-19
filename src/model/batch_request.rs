@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::BatchRequestAction;
-use fake::Dummy;
 ///A request object for use in a batch request.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct BatchRequest {

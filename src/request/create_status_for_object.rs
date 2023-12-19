@@ -9,7 +9,7 @@ use crate::AsanaClient;
 On request success, this will return a [`CreateStatusForObjectResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CreateStatusForObjectRequest {
-    pub data: Option<StatusUpdateRequest>,
+    pub data: StatusUpdateRequest,
     pub limit: Option<i64>,
     pub offset: Option<String>,
     pub opt_fields: Option<Vec<String>>,
@@ -17,10 +17,6 @@ pub struct CreateStatusForObjectRequest {
 }
 impl CreateStatusForObjectRequest {}
 impl FluentRequest<'_, CreateStatusForObjectRequest> {
-    pub fn data(mut self, data: StatusUpdateRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn limit(mut self, limit: i64) -> Self {
         self.params.limit = Some(limit);
         self
@@ -52,9 +48,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, CreateStatusForObjectRe
         Box::pin(async move {
             let url = "/status_updates";
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.limit {
                 r = r.query("limit", &unwrapped.to_string());
             }

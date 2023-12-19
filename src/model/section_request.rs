@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct SectionRequest {
     ///An existing section within this project after which the added section should be inserted. Cannot be provided together with insert_before.
     #[serde(skip_serializing_if = "Option::is_none")]

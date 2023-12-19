@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///The primary object that was affected by this event.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AuditLogEventResource {
     ///The email of the resource, if applicable.
     #[serde(skip_serializing_if = "Option::is_none")]

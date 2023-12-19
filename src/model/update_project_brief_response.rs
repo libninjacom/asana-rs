@@ -1,11 +1,9 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectBriefResponse;
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct UpdateProjectBriefResponse {
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub data: Option<ProjectBriefResponse>,
+    pub data: ProjectBriefResponse,
 }
 impl std::fmt::Display for UpdateProjectBriefResponse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

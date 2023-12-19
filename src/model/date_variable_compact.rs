@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct DateVariableCompact {
     ///The description of what the date variable is used for when instantiating a project.
     #[serde(skip_serializing_if = "Option::is_none")]

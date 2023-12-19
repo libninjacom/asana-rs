@@ -1,11 +1,9 @@
 
 use serde::{Serialize, Deserialize};
 use super::WorkspaceResponse;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct UpdateWorkspaceResponse {
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub data: Option<WorkspaceResponse>,
+    pub data: WorkspaceResponse,
 }
 impl std::fmt::Display for UpdateWorkspaceResponse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct EnumOptionInsertRequest {
     ///An existing enum option within this custom field after which the new enum option should be inserted. Cannot be provided together with before_enum_option.
     #[serde(skip_serializing_if = "Option::is_none")]

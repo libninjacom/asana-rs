@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::TimePeriodCompact;
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TimePeriodBase {
     #[serde(flatten)]

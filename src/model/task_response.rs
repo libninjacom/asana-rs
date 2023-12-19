@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{CustomFieldResponse, ProjectCompact, TagCompact, TaskBase, UserCompact};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskResponse {
     #[serde(flatten)]

@@ -1,9 +1,8 @@
 
 use serde::{Serialize, Deserialize};
 use super::UserCompact;
-use fake::Dummy;
 ///An object to represent a user's like.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct Like {
     ///Globally unique identifier of the object, as a string.
     #[serde(skip_serializing_if = "Option::is_none")]

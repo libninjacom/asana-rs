@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::CustomFieldSettingBase;
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct CustomFieldSettingResponse {
     #[serde(flatten)]

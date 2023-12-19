@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///*Conditional*
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct StoryResponseDates {
     ///The UTC date and time on which this task is due, or null if the task has no due time. This takes an ISO 8601 date string in UTC and should not be used together with `due_on`.
     #[serde(skip_serializing_if = "Option::is_none")]

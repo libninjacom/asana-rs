@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///A generic Asana Resource, containing a globally unique identifier.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AsanaResource {
     ///Globally unique identifier of the resource, as a string.
     #[serde(skip_serializing_if = "Option::is_none")]

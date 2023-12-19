@@ -9,16 +9,12 @@ use crate::AsanaClient;
 On request success, this will return a [`CreateWebhookResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CreateWebhookRequest {
-    pub data: Option<WebhookRequest>,
+    pub data: WebhookRequest,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
 }
 impl CreateWebhookRequest {}
 impl FluentRequest<'_, CreateWebhookRequest> {
-    pub fn data(mut self, data: WebhookRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -42,9 +38,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, CreateWebhookRequest> {
         Box::pin(async move {
             let url = "/webhooks";
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

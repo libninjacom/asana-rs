@@ -1,12 +1,10 @@
 
 use serde::{Serialize, Deserialize};
 use super::EmptyResponse;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct RemoveUserForTeamResponse {
     ///An empty object. Some endpoints do not return an object on success. The success is conveyed through a 2-- status code and returning an empty object.
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub data: Option<EmptyResponse>,
+    pub data: EmptyResponse,
 }
 impl std::fmt::Display for RemoveUserForTeamResponse {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

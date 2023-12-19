@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{MembershipCompact, NextPage};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetMembershipsResponse {
     #[serde(skip_serializing_if = "Option::is_none")]

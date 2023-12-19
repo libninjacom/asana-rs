@@ -9,16 +9,12 @@ use crate::AsanaClient;
 On request success, this will return a [`AddDependentsForTaskResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AddDependentsForTaskRequest {
-    pub data: Option<ModifyDependentsRequest>,
+    pub data: ModifyDependentsRequest,
     pub opt_pretty: Option<bool>,
     pub task_gid: String,
 }
 impl AddDependentsForTaskRequest {}
 impl FluentRequest<'_, AddDependentsForTaskRequest> {
-    pub fn data(mut self, data: ModifyDependentsRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_pretty(mut self, opt_pretty: bool) -> Self {
         self.params.opt_pretty = Some(opt_pretty);
         self
@@ -33,9 +29,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, AddDependentsForTaskReq
                 "/tasks/{task_gid}/addDependents", task_gid = self.params.task_gid
             );
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_pretty {
                 r = r.query("opt_pretty", &unwrapped.to_string());
             }

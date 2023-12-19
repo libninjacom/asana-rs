@@ -1,6 +1,5 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 /**An *event* is an object representing a change to a resource that was
 observed by an event subscription or delivered asynchronously to
 the target location of an active webhook.

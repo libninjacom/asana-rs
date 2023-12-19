@@ -10,16 +10,12 @@ On request success, this will return a [`UpdateCustomFieldResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct UpdateCustomFieldRequest {
     pub custom_field_gid: String,
-    pub data: Option<CustomFieldRequest>,
+    pub data: CustomFieldRequest,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
 }
 impl UpdateCustomFieldRequest {}
 impl FluentRequest<'_, UpdateCustomFieldRequest> {
-    pub fn data(mut self, data: CustomFieldRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -46,9 +42,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, UpdateCustomFieldReques
                 .custom_field_gid
             );
             let mut r = self.client.client.put(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

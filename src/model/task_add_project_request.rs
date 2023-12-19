@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskAddProjectRequest {
     ///A task in the project to insert the task after, or `null` to insert at the beginning of the list.
     #[serde(skip_serializing_if = "Option::is_none")]

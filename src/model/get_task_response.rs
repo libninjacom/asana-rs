@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::TaskResponse;
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetTaskResponse {
     #[serde(skip_serializing_if = "Option::is_none")]

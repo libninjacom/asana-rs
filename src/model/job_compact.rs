@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{AsanaResource, ProjectCompact, ProjectTemplateCompact};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct JobCompact {
     ///A generic Asana Resource, containing a globally unique identifier.

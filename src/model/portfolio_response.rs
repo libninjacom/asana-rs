@@ -4,7 +4,6 @@ use super::{
     CustomFieldCompact, CustomFieldSettingResponse, PortfolioBase,
     ProjectTemplateCompact, UserCompact,
 };
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct PortfolioResponse {
     #[serde(flatten)]

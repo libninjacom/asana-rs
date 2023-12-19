@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{CustomFieldSettingResponse, ProjectCompact, UserCompact};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectBase {
     #[serde(flatten)]

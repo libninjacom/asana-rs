@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{CustomFieldResponse, NextPage};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetCustomFieldsForWorkspaceResponse {
     #[serde(skip_serializing_if = "Option::is_none")]

@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::{ProjectCompact, ProjectMembershipBase, UserCompact};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectMembershipNormalResponse {
     #[serde(flatten)]
     pub project_membership_base: ProjectMembershipBase,

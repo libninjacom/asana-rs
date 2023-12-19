@@ -1,10 +1,9 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 /**A collection of rich text that will be displayed as a preview to another app.
 
 This is read-only except for a small group of whitelisted apps.*/
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct Preview {
     ///Some fallback text to display if unable to display the full preview.
     #[serde(skip_serializing_if = "Option::is_none")]

@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct RequestedRoleRequest {
     ///Globally unique identifier of the template role in the project template.
     #[serde(skip_serializing_if = "Option::is_none")]

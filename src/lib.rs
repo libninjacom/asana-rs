@@ -174,11 +174,12 @@ When no `offset` is provided, the response will begin with the oldest events tha
 Make multiple requests in parallel to Asana's API.*/
     pub fn create_batch_request(
         &self,
+        data: BatchRequest,
     ) -> FluentRequest<'_, request::CreateBatchRequestRequest> {
         FluentRequest {
             client: self,
             params: request::CreateBatchRequestRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -234,11 +235,12 @@ A custom field’s type must be one of `text`, `enum`, `multi_enum`, `number`,
 Returns the full record of the newly created custom field.*/
     pub fn create_custom_field(
         &self,
+        data: CustomFieldRequest,
     ) -> FluentRequest<'_, request::CreateCustomFieldRequest> {
         FluentRequest {
             client: self,
             params: request::CreateCustomFieldRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -278,12 +280,13 @@ Returns the complete updated custom field record.*/
     pub fn update_custom_field(
         &self,
         custom_field_gid: &str,
+        data: CustomFieldRequest,
     ) -> FluentRequest<'_, request::UpdateCustomFieldRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateCustomFieldRequest {
                 custom_field_gid: custom_field_gid.to_owned(),
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -332,12 +335,13 @@ Returns the full record of the newly created enum option.*/
     pub fn create_enum_option_for_custom_field(
         &self,
         custom_field_gid: &str,
+        data: EnumOptionRequest,
     ) -> FluentRequest<'_, request::CreateEnumOptionForCustomFieldRequest> {
         FluentRequest {
             client: self,
             params: request::CreateEnumOptionForCustomFieldRequest {
                 custom_field_gid: custom_field_gid.to_owned(),
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -350,12 +354,13 @@ Locked custom fields can only be reordered by the user who locked the field.*/
     pub fn insert_enum_option_for_custom_field(
         &self,
         custom_field_gid: &str,
+        data: EnumOptionInsertRequest,
     ) -> FluentRequest<'_, request::InsertEnumOptionForCustomFieldRequest> {
         FluentRequest {
             client: self,
             params: request::InsertEnumOptionForCustomFieldRequest {
                 custom_field_gid: custom_field_gid.to_owned(),
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -368,12 +373,13 @@ Locked custom fields can only be updated by the user who locked the field.
 Returns the full record of the updated enum option.*/
     pub fn update_enum_option(
         &self,
+        data: EnumOptionBase,
         enum_option_gid: &str,
     ) -> FluentRequest<'_, request::UpdateEnumOptionRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateEnumOptionRequest {
-                data: None,
+                data,
                 enum_option_gid: enum_option_gid.to_owned(),
                 opt_fields: None,
                 opt_pretty: None,
@@ -435,12 +441,13 @@ any unspecified fields will remain unchanged.
 Returns the complete updated goal relationship record.*/
     pub fn update_goal_relationship(
         &self,
+        data: GoalRelationshipRequest,
         goal_relationship_gid: &str,
     ) -> FluentRequest<'_, request::UpdateGoalRelationshipRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateGoalRelationshipRequest {
-                data: None,
+                data,
                 goal_relationship_gid: goal_relationship_gid.to_owned(),
                 opt_fields: None,
                 opt_pretty: None,
@@ -473,12 +480,13 @@ Creates a goal relationship by adding a supporting resource to a given goal.
 Returns the newly created goal relationship record.*/
     pub fn add_supporting_relationship(
         &self,
+        data: GoalAddSupportingRelationshipRequest,
         goal_gid: &str,
     ) -> FluentRequest<'_, request::AddSupportingRelationshipRequest> {
         FluentRequest {
             client: self,
             params: request::AddSupportingRelationshipRequest {
-                data: None,
+                data,
                 goal_gid: goal_gid.to_owned(),
                 opt_fields: None,
                 opt_pretty: None,
@@ -490,12 +498,13 @@ Returns the newly created goal relationship record.*/
 Removes a goal relationship for a given parent goal.*/
     pub fn remove_supporting_relationship(
         &self,
+        data: GoalRemoveSupportingRelationshipRequest,
         goal_gid: &str,
     ) -> FluentRequest<'_, request::RemoveSupportingRelationshipRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveSupportingRelationshipRequest {
-                data: None,
+                data,
                 goal_gid: goal_gid.to_owned(),
                 opt_pretty: None,
             },
@@ -526,12 +535,13 @@ any unspecified fields will remain unchanged.
 Returns the complete updated goal record.*/
     pub fn update_goal(
         &self,
+        data: GoalUpdateRequest,
         goal_gid: &str,
     ) -> FluentRequest<'_, request::UpdateGoalRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateGoalRequest {
-                data: None,
+                data,
                 goal_gid: goal_gid.to_owned(),
                 opt_fields: None,
                 opt_pretty: None,
@@ -581,11 +591,14 @@ Returns compact goal records.*/
 Creates a new goal in a workspace or team.
 
 Returns the full record of the newly created goal.*/
-    pub fn create_goal(&self) -> FluentRequest<'_, request::CreateGoalRequest> {
+    pub fn create_goal(
+        &self,
+        data: GoalRequest,
+    ) -> FluentRequest<'_, request::CreateGoalRequest> {
         FluentRequest {
             client: self,
             params: request::CreateGoalRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -596,12 +609,13 @@ Returns the full record of the newly created goal.*/
 Creates and adds a goal metric to a specified goal. Note that this replaces an existing goal metric if one already exists.*/
     pub fn create_goal_metric(
         &self,
+        data: GoalMetricRequest,
         goal_gid: &str,
     ) -> FluentRequest<'_, request::CreateGoalMetricRequest> {
         FluentRequest {
             client: self,
             params: request::CreateGoalMetricRequest {
-                data: None,
+                data,
                 goal_gid: goal_gid.to_owned(),
                 opt_fields: None,
                 opt_pretty: None,
@@ -616,12 +630,13 @@ otherwise responds with a 400 status code.
 Returns the complete updated goal metric record.*/
     pub fn update_goal_metric(
         &self,
+        data: GoalMetricCurrentValueRequest,
         goal_gid: &str,
     ) -> FluentRequest<'_, request::UpdateGoalMetricRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateGoalMetricRequest {
-                data: None,
+                data,
                 goal_gid: goal_gid.to_owned(),
                 opt_fields: None,
                 opt_pretty: None,
@@ -635,12 +650,13 @@ Each goal can be associated with zero or more followers in the system.
 Requests to add/remove followers, if successful, will return the complete updated goal record, described above.*/
     pub fn add_followers(
         &self,
+        data: TaskAddFollowersRequest,
         goal_gid: &str,
     ) -> FluentRequest<'_, request::AddFollowersRequest> {
         FluentRequest {
             client: self,
             params: request::AddFollowersRequest {
-                data: None,
+                data,
                 goal_gid: goal_gid.to_owned(),
                 opt_fields: None,
                 opt_pretty: None,
@@ -654,12 +670,13 @@ Each goal can be associated with zero or more followers in the system.
 Requests to add/remove followers, if successful, will return the complete updated goal record, described above.*/
     pub fn remove_followers(
         &self,
+        data: TaskAddFollowersRequest,
         goal_gid: &str,
     ) -> FluentRequest<'_, request::RemoveFollowersRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveFollowersRequest {
-                data: None,
+                data,
                 goal_gid: goal_gid.to_owned(),
                 opt_fields: None,
                 opt_pretty: None,
@@ -719,11 +736,12 @@ of `goals`.
 Returns the full record of the newly created membership.*/
     pub fn create_membership(
         &self,
+        data: CreateMembershipRequestBody,
     ) -> FluentRequest<'_, request::CreateMembershipRequest> {
         FluentRequest {
             client: self,
             params: request::CreateMembershipRequest {
-                data: None,
+                data,
                 opt_pretty: None,
             },
         }
@@ -767,11 +785,12 @@ Returns an empty data record.*/
 This method creates a request to export an Organization. Asana will complete the export at some point after you create the request.*/
     pub fn create_organization_export(
         &self,
+        data: OrganizationExportRequest,
     ) -> FluentRequest<'_, request::CreateOrganizationExportRequest> {
         FluentRequest {
             client: self,
             params: request::CreateOrganizationExportRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -877,11 +896,12 @@ API will *not* be created with the same initial state to allow
 integrations to create their own starting state on a portfolio.*/
     pub fn create_portfolio(
         &self,
+        data: PortfolioRequest,
     ) -> FluentRequest<'_, request::CreatePortfolioRequest> {
         FluentRequest {
             client: self,
             params: request::CreatePortfolioRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -912,12 +932,13 @@ any unspecified fields will remain unchanged.
 Returns the complete updated portfolio record.*/
     pub fn update_portfolio(
         &self,
+        data: PortfolioRequest,
         portfolio_gid: &str,
     ) -> FluentRequest<'_, request::UpdatePortfolioRequest> {
         FluentRequest {
             client: self,
             params: request::UpdatePortfolioRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 portfolio_gid: portfolio_gid.to_owned(),
@@ -966,12 +987,13 @@ Add an item to a portfolio.
 Returns an empty data block.*/
     pub fn add_item_for_portfolio(
         &self,
+        data: PortfolioAddItemRequest,
         portfolio_gid: &str,
     ) -> FluentRequest<'_, request::AddItemForPortfolioRequest> {
         FluentRequest {
             client: self,
             params: request::AddItemForPortfolioRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 portfolio_gid: portfolio_gid.to_owned(),
             },
@@ -983,12 +1005,13 @@ Remove an item from a portfolio.
 Returns an empty data block.*/
     pub fn remove_item_for_portfolio(
         &self,
+        data: PortfolioRemoveItemRequest,
         portfolio_gid: &str,
     ) -> FluentRequest<'_, request::RemoveItemForPortfolioRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveItemForPortfolioRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 portfolio_gid: portfolio_gid.to_owned(),
             },
@@ -999,12 +1022,13 @@ Returns an empty data block.*/
 Custom fields are associated with portfolios by way of custom field settings.  This method creates a setting for the portfolio.*/
     pub fn add_custom_field_setting_for_portfolio(
         &self,
+        data: AddCustomFieldSettingRequest,
         portfolio_gid: &str,
     ) -> FluentRequest<'_, request::AddCustomFieldSettingForPortfolioRequest> {
         FluentRequest {
             client: self,
             params: request::AddCustomFieldSettingForPortfolioRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 portfolio_gid: portfolio_gid.to_owned(),
             },
@@ -1015,12 +1039,13 @@ Custom fields are associated with portfolios by way of custom field settings.  T
 Removes a custom field setting from a portfolio.*/
     pub fn remove_custom_field_setting_for_portfolio(
         &self,
+        data: RemoveCustomFieldSettingRequest,
         portfolio_gid: &str,
     ) -> FluentRequest<'_, request::RemoveCustomFieldSettingForPortfolioRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveCustomFieldSettingForPortfolioRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 portfolio_gid: portfolio_gid.to_owned(),
             },
@@ -1032,12 +1057,13 @@ Adds the specified list of users as members of the portfolio.
 Returns the updated portfolio record.*/
     pub fn add_members_for_portfolio(
         &self,
+        data: AddMembersRequest,
         portfolio_gid: &str,
     ) -> FluentRequest<'_, request::AddMembersForPortfolioRequest> {
         FluentRequest {
             client: self,
             params: request::AddMembersForPortfolioRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 portfolio_gid: portfolio_gid.to_owned(),
@@ -1050,12 +1076,13 @@ Removes the specified list of users from members of the portfolio.
 Returns the updated portfolio record.*/
     pub fn remove_members_for_portfolio(
         &self,
+        data: RemoveMembersRequest,
         portfolio_gid: &str,
     ) -> FluentRequest<'_, request::RemoveMembersForPortfolioRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveMembersForPortfolioRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 portfolio_gid: portfolio_gid.to_owned(),
@@ -1087,12 +1114,13 @@ any unspecified fields will remain unchanged.
 Returns the complete updated project brief record.*/
     pub fn update_project_brief(
         &self,
+        data: ProjectBriefRequest,
         project_brief_gid: &str,
     ) -> FluentRequest<'_, request::UpdateProjectBriefRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateProjectBriefRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_brief_gid: project_brief_gid.to_owned(),
@@ -1123,12 +1151,13 @@ Creates a new project brief.
 Returns the full record of the newly created project brief.*/
     pub fn create_project_brief(
         &self,
+        data: ProjectBriefRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::CreateProjectBriefRequest> {
         FluentRequest {
             client: self,
             params: request::CreateProjectBriefRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1236,12 +1265,13 @@ Creates a new status update on the project.
 Returns the full record of the newly created project status update.*/
     pub fn create_project_status_for_project(
         &self,
+        data: ProjectStatusRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::CreateProjectStatusForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::CreateProjectStatusForProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1326,12 +1356,13 @@ To form this request, it is recommended to first make a request to [get a projec
 _Note: The body of this request will differ if your workspace is an organization. To determine if your workspace is an organization, use the [is_organization](/reference/workspaces) parameter._*/
     pub fn instantiate_project(
         &self,
+        data: ProjectTemplateInstantiateProjectRequest,
         project_template_gid: &str,
     ) -> FluentRequest<'_, request::InstantiateProjectRequest> {
         FluentRequest {
             client: self,
             params: request::InstantiateProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_template_gid: project_template_gid.to_owned(),
@@ -1369,11 +1400,14 @@ If the workspace for your project is an organization, you must also
 supply a `team` to share the project with.
 
 Returns the full record of the newly created project.*/
-    pub fn create_project(&self) -> FluentRequest<'_, request::CreateProjectRequest> {
+    pub fn create_project(
+        &self,
+        data: ProjectRequest,
+    ) -> FluentRequest<'_, request::CreateProjectRequest> {
         FluentRequest {
             client: self,
             params: request::CreateProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -1408,12 +1442,13 @@ you last retrieved the task.
 Returns the complete updated project record.*/
     pub fn update_project(
         &self,
+        data: ProjectUpdateRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::UpdateProjectRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1443,12 +1478,13 @@ Returns an empty data record.*/
 Creates and returns a job that will asynchronously handle the duplication.*/
     pub fn duplicate_project(
         &self,
+        data: ProjectDuplicateRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::DuplicateProjectRequest> {
         FluentRequest {
             client: self,
             params: request::DuplicateProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1499,12 +1535,13 @@ Creates a project shared with the given team.
 Returns the full record of the newly created project.*/
     pub fn create_project_for_team(
         &self,
+        data: ProjectRequest,
         team_gid: &str,
     ) -> FluentRequest<'_, request::CreateProjectForTeamRequest> {
         FluentRequest {
             client: self,
             params: request::CreateProjectForTeamRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 team_gid: team_gid.to_owned(),
@@ -1541,12 +1578,13 @@ supply a team to share the project with.
 Returns the full record of the newly created project.*/
     pub fn create_project_for_workspace(
         &self,
+        data: ProjectRequest,
         workspace_gid: &str,
     ) -> FluentRequest<'_, request::CreateProjectForWorkspaceRequest> {
         FluentRequest {
             client: self,
             params: request::CreateProjectForWorkspaceRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 workspace_gid: workspace_gid.to_owned(),
@@ -1558,12 +1596,13 @@ Returns the full record of the newly created project.*/
 Custom fields are associated with projects by way of custom field settings.  This method creates a setting for the project.*/
     pub fn add_custom_field_setting_for_project(
         &self,
+        data: AddCustomFieldSettingRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::AddCustomFieldSettingForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::AddCustomFieldSettingForProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1575,12 +1614,13 @@ Custom fields are associated with projects by way of custom field settings.  Thi
 Removes a custom field setting from a project.*/
     pub fn remove_custom_field_setting_for_project(
         &self,
+        data: RemoveCustomFieldSettingRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::RemoveCustomFieldSettingForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveCustomFieldSettingForProjectRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
             },
@@ -1612,12 +1652,13 @@ Adds the specified list of users as members of the project. Note that a user bei
 Returns the updated project record.*/
     pub fn add_members_for_project(
         &self,
+        data: AddMembersRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::AddMembersForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::AddMembersForProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1630,12 +1671,13 @@ Removes the specified list of users from members of the project.
 Returns the updated project record.*/
     pub fn remove_members_for_project(
         &self,
+        data: RemoveMembersRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::RemoveMembersForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveMembersForProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1648,12 +1690,13 @@ Adds the specified list of users as followers to the project. Followers are a su
 Returns the updated project record.*/
     pub fn add_followers_for_project(
         &self,
+        data: AddFollowersRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::AddFollowersForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::AddFollowersForProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1666,12 +1709,13 @@ Removes the specified list of users from following the project, this will not af
 Returns the updated project record.*/
     pub fn remove_followers_for_project(
         &self,
+        data: RemoveFollowersRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::RemoveFollowersForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveFollowersForProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1685,12 +1729,13 @@ while the resulting project template can be accessed with the API, it won't be v
 UI until Project Templates 2.0 is launched in the app. See more in [this forum post](https://forum.asana.com/t/a-new-api-for-project-templates/156432).*/
     pub fn project_save_as_template(
         &self,
+        data: ProjectSaveAsTemplateRequestBody,
         project_gid: &str,
     ) -> FluentRequest<'_, request::ProjectSaveAsTemplateRequest> {
         FluentRequest {
             client: self,
             params: request::ProjectSaveAsTemplateRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1702,12 +1747,13 @@ UI until Project Templates 2.0 is launched in the app. See more in [this forum p
 Trigger a rule which uses an ["incoming web request"](/docs/incoming-web-requests) trigger.*/
     pub fn trigger_rule(
         &self,
+        data: RuleTriggerRequest,
         rule_trigger_gid: &str,
     ) -> FluentRequest<'_, request::TriggerRuleRequest> {
         FluentRequest {
             client: self,
             params: request::TriggerRuleRequest {
-                data: None,
+                data,
                 rule_trigger_gid: rule_trigger_gid.to_owned(),
             },
         }
@@ -1742,12 +1788,13 @@ you last retrieved the task.
 Returns the complete updated section record.*/
     pub fn update_section(
         &self,
+        data: SectionRequest,
         section_gid: &str,
     ) -> FluentRequest<'_, request::UpdateSectionRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateSectionRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 section_gid: section_gid.to_owned(),
@@ -1800,12 +1847,13 @@ Creates a new section in a project.
 Returns the full record of the newly created section.*/
     pub fn create_section_for_project(
         &self,
+        data: SectionRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::CreateSectionForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::CreateSectionForProjectRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
@@ -1821,12 +1869,13 @@ The task will be inserted at the top of a section unless an insert_before or ins
 This does not work for separators (tasks with the resource_subtype of section).*/
     pub fn add_task_for_section(
         &self,
+        data: SectionTaskInsertRequest,
         section_gid: &str,
     ) -> FluentRequest<'_, request::AddTaskForSectionRequest> {
         FluentRequest {
             client: self,
             params: request::AddTaskForSectionRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 section_gid: section_gid.to_owned(),
             },
@@ -1842,12 +1891,13 @@ Sections cannot be moved between projects.
 Returns an empty data block.*/
     pub fn insert_section_for_project(
         &self,
+        data: ProjectSectionInsertRequest,
         project_gid: &str,
     ) -> FluentRequest<'_, request::InsertSectionForProjectRequest> {
         FluentRequest {
             client: self,
             params: request::InsertSectionForProjectRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 project_gid: project_gid.to_owned(),
             },
@@ -1911,11 +1961,12 @@ Creates a new status update on an object.
 Returns the full record of the newly created status update.*/
     pub fn create_status_for_object(
         &self,
+        data: StatusUpdateRequest,
     ) -> FluentRequest<'_, request::CreateStatusForObjectRequest> {
         FluentRequest {
             client: self,
             params: request::CreateStatusForObjectRequest {
-                data: None,
+                data,
                 limit: None,
                 offset: None,
                 opt_fields: None,
@@ -1944,12 +1995,13 @@ Returns the full record for a single story.*/
 Updates the story and returns the full record for the updated story. Only comment stories can have their text updated, and only comment stories and attachment stories can be pinned. Only one of `text` and `html_text` can be specified.*/
     pub fn update_story(
         &self,
+        data: StoryRequest,
         story_gid: &str,
     ) -> FluentRequest<'_, request::UpdateStoryRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateStoryRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 story_gid: story_gid.to_owned(),
@@ -2000,12 +2052,13 @@ authenticated user, and timestamped when the server receives the request.
 Returns the full record for the new story added to the task.*/
     pub fn create_story_for_task(
         &self,
+        data: StoryRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::CreateStoryForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::CreateStoryForTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
@@ -2037,11 +2090,14 @@ the workspace parameter regardless of whether or not it is an
 organization.
 
 Returns the full record of the newly created tag.*/
-    pub fn create_tag(&self) -> FluentRequest<'_, request::CreateTagRequest> {
+    pub fn create_tag(
+        &self,
+        data: TagRequest,
+    ) -> FluentRequest<'_, request::CreateTagRequest> {
         FluentRequest {
             client: self,
             params: request::CreateTagRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -2149,12 +2205,13 @@ organization.
 Returns the full record of the newly created tag.*/
     pub fn create_tag_for_workspace(
         &self,
+        data: TagCreateTagForWorkspaceRequest,
         workspace_gid: &str,
     ) -> FluentRequest<'_, request::CreateTagForWorkspaceRequest> {
         FluentRequest {
             client: self,
             params: request::CreateTagForWorkspaceRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 workspace_gid: workspace_gid.to_owned(),
@@ -2199,12 +2256,13 @@ Returns the complete task template record for a single task template.*/
 Creates and returns a job that will asynchronously handle the task instantiation.*/
     pub fn instantiate_task(
         &self,
+        data: TaskTemplateInstantiateTaskRequest,
         task_template_gid: &str,
     ) -> FluentRequest<'_, request::InstantiateTaskRequest> {
         FluentRequest {
             client: self,
             params: request::InstantiateTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_template_gid: task_template_gid.to_owned(),
@@ -2242,11 +2300,14 @@ unspecified fields will take on default values.
 Every task is required to be created in a specific workspace, and this
 workspace cannot be changed once set. The workspace need not be set
 explicitly if you specify `projects` or a `parent` task instead.*/
-    pub fn create_task(&self) -> FluentRequest<'_, request::CreateTaskRequest> {
+    pub fn create_task(
+        &self,
+        data: TaskRequest,
+    ) -> FluentRequest<'_, request::CreateTaskRequest> {
         FluentRequest {
             client: self,
             params: request::CreateTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -2281,12 +2342,13 @@ you last retrieved the task.
 Returns the complete updated task record.*/
     pub fn update_task(
         &self,
+        data: TaskRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::UpdateTaskRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
@@ -2318,12 +2380,13 @@ Returns an empty data record.*/
 Creates and returns a job that will asynchronously handle the duplication.*/
     pub fn duplicate_task(
         &self,
+        data: TaskDuplicateRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::DuplicateTaskRequest> {
         FluentRequest {
             client: self,
             params: request::DuplicateTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
@@ -2430,12 +2493,13 @@ Returns a compact representation of all of the subtasks of a task.*/
 Creates a new subtask and adds it to the parent task. Returns the full record for the newly created subtask.*/
     pub fn create_subtask_for_task(
         &self,
+        data: TaskRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::CreateSubtaskForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::CreateSubtaskForTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
@@ -2447,12 +2511,13 @@ Creates a new subtask and adds it to the parent task. Returns the full record fo
 parent, or no parent task at all. Returns an empty data block. When using `insert_before` and `insert_after`, at most one of those two options can be specified, and they must already be subtasks of the parent.*/
     pub fn set_parent_for_task(
         &self,
+        data: TaskSetParentRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::SetParentForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::SetParentForTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
@@ -2482,12 +2547,13 @@ Returns the compact representations of all of the dependencies of a task.*/
 Marks a set of tasks as dependencies of this task, if they are not already dependencies. *A task can have at most 30 dependents and dependencies combined*.*/
     pub fn add_dependencies_for_task(
         &self,
+        data: ModifyDependenciesRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::AddDependenciesForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::AddDependenciesForTaskRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
             },
@@ -2498,12 +2564,13 @@ Marks a set of tasks as dependencies of this task, if they are not already depen
 Unlinks a set of dependencies from this task.*/
     pub fn remove_dependencies_for_task(
         &self,
+        data: ModifyDependenciesRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::RemoveDependenciesForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveDependenciesForTaskRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
             },
@@ -2532,12 +2599,13 @@ Returns the compact representations of all of the dependents of a task.*/
 Marks a set of tasks as dependents of this task, if they are not already dependents. *A task can have at most 30 dependents and dependencies combined*.*/
     pub fn add_dependents_for_task(
         &self,
+        data: ModifyDependentsRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::AddDependentsForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::AddDependentsForTaskRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
             },
@@ -2548,12 +2616,13 @@ Marks a set of tasks as dependents of this task, if they are not already depende
 Unlinks a set of dependents from this task.*/
     pub fn remove_dependents_for_task(
         &self,
+        data: ModifyDependentsRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::RemoveDependentsForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveDependentsForTaskRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
             },
@@ -2577,12 +2646,13 @@ within the section to anchor the position of this task.
 Returns an empty data block.*/
     pub fn add_project_for_task(
         &self,
+        data: TaskAddProjectRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::AddProjectForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::AddProjectForTaskRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
             },
@@ -2596,12 +2666,13 @@ the system, but it will not be in the project anymore.
 Returns an empty data block.*/
     pub fn remove_project_for_task(
         &self,
+        data: TaskRemoveProjectRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::RemoveProjectForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveProjectForTaskRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
             },
@@ -2612,12 +2683,13 @@ Returns an empty data block.*/
 Adds a tag to a task. Returns an empty data block.*/
     pub fn add_tag_for_task(
         &self,
+        data: TaskAddTagRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::AddTagForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::AddTagForTaskRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
             },
@@ -2628,12 +2700,13 @@ Adds a tag to a task. Returns an empty data block.*/
 Removes a tag from a task. Returns an empty data block.*/
     pub fn remove_tag_for_task(
         &self,
+        data: TaskRemoveTagRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::RemoveTagForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveTagForTaskRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
             },
@@ -2646,12 +2719,13 @@ Each task can be associated with zero or more followers in the system.
 Requests to add/remove followers, if successful, will return the complete updated task record, described above.*/
     pub fn add_followers_for_task(
         &self,
+        data: TaskAddFollowersRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::AddFollowersForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::AddFollowersForTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
@@ -2663,12 +2737,13 @@ Requests to add/remove followers, if successful, will return the complete update
 Removes each of the specified followers from the task if they are following. Returns the complete, updated record for the affected task.*/
     pub fn remove_follower_for_task(
         &self,
+        data: TaskRemoveFollowersRequest,
         task_gid: &str,
     ) -> FluentRequest<'_, request::RemoveFollowerForTaskRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveFollowerForTaskRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
@@ -2850,11 +2925,14 @@ Returns the compact team membership records for the user.*/
     /**Create a team
 
 Creates a team within the current workspace.*/
-    pub fn create_team(&self) -> FluentRequest<'_, request::CreateTeamRequest> {
+    pub fn create_team(
+        &self,
+        data: TeamRequest,
+    ) -> FluentRequest<'_, request::CreateTeamRequest> {
         FluentRequest {
             client: self,
             params: request::CreateTeamRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -2881,12 +2959,13 @@ Returns the full record for a single team.*/
 Updates a team within the current workspace.*/
     pub fn update_team(
         &self,
+        data: TeamRequest,
         team_gid: &str,
     ) -> FluentRequest<'_, request::UpdateTeamRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateTeamRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 team_gid: team_gid.to_owned(),
@@ -2938,12 +3017,13 @@ The user making this call must be a member of the team in order to add others. T
 Returns the complete team membership record for the newly added user.*/
     pub fn add_user_for_team(
         &self,
+        data: TeamAddUserRequest,
         team_gid: &str,
     ) -> FluentRequest<'_, request::AddUserForTeamRequest> {
         FluentRequest {
             client: self,
             params: request::AddUserForTeamRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 team_gid: team_gid.to_owned(),
@@ -2955,12 +3035,13 @@ Returns the complete team membership record for the newly added user.*/
 The user making this call must be a member of the team in order to remove themselves or others.*/
     pub fn remove_user_for_team(
         &self,
+        data: TeamRemoveUserRequest,
         team_gid: &str,
     ) -> FluentRequest<'_, request::RemoveUserForTeamRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveUserForTeamRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 team_gid: team_gid.to_owned(),
             },
@@ -3027,12 +3108,13 @@ Creates a time tracking entry on a given task.
 Returns the record of the newly created time tracking entry.*/
     pub fn create_time_tracking_entry(
         &self,
+        data: CreateTimeTrackingEntryRequestBody,
         task_gid: &str,
     ) -> FluentRequest<'_, request::CreateTimeTrackingEntryRequest> {
         FluentRequest {
             client: self,
             params: request::CreateTimeTrackingEntryRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 task_gid: task_gid.to_owned(),
@@ -3068,12 +3150,13 @@ you last retrieved the task.
 Returns the complete updated time tracking entry record.*/
     pub fn update_time_tracking_entry(
         &self,
+        data: UpdateTimeTrackingEntryRequestBody,
         time_tracking_entry_gid: &str,
     ) -> FluentRequest<'_, request::UpdateTimeTrackingEntryRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateTimeTrackingEntryRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 time_tracking_entry_gid: time_tracking_entry_gid.to_owned(),
@@ -3358,11 +3441,14 @@ HTTP/1.1 201
   }
 }
 ```*/
-    pub fn create_webhook(&self) -> FluentRequest<'_, request::CreateWebhookRequest> {
+    pub fn create_webhook(
+        &self,
+        data: WebhookRequest,
+    ) -> FluentRequest<'_, request::CreateWebhookRequest> {
         FluentRequest {
             client: self,
             params: request::CreateWebhookRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
             },
@@ -3389,12 +3475,13 @@ Returns the full record for the given webhook.*/
 An existing webhook's filters can be updated by making a PUT request on the URL for that webhook. Note that the webhook's previous `filters` array will be completely overwritten by the `filters` sent in the PUT request.*/
     pub fn update_webhook(
         &self,
+        data: WebhookUpdateRequest,
         webhook_gid: &str,
     ) -> FluentRequest<'_, request::UpdateWebhookRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateWebhookRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 webhook_gid: webhook_gid.to_owned(),
@@ -3506,12 +3593,13 @@ Currently the only field that can be modified for a workspace is its name.
 Returns the complete, updated workspace record.*/
     pub fn update_workspace(
         &self,
+        data: WorkspaceRequest,
         workspace_gid: &str,
     ) -> FluentRequest<'_, request::UpdateWorkspaceRequest> {
         FluentRequest {
             client: self,
             params: request::UpdateWorkspaceRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 workspace_gid: workspace_gid.to_owned(),
@@ -3524,12 +3612,13 @@ Add a user to a workspace or organization.
 The user can be referenced by their globally unique user ID or their email address. Returns the full user record for the invited user.*/
     pub fn add_user_for_workspace(
         &self,
+        data: WorkspaceAddUserRequest,
         workspace_gid: &str,
     ) -> FluentRequest<'_, request::AddUserForWorkspaceRequest> {
         FluentRequest {
             client: self,
             params: request::AddUserForWorkspaceRequest {
-                data: None,
+                data,
                 opt_fields: None,
                 opt_pretty: None,
                 workspace_gid: workspace_gid.to_owned(),
@@ -3543,12 +3632,13 @@ The user making this call must be an admin in the workspace. The user can be ref
 Returns an empty data record.*/
     pub fn remove_user_for_workspace(
         &self,
+        data: WorkspaceRemoveUserRequest,
         workspace_gid: &str,
     ) -> FluentRequest<'_, request::RemoveUserForWorkspaceRequest> {
         FluentRequest {
             client: self,
             params: request::RemoveUserForWorkspaceRequest {
-                data: None,
+                data,
                 opt_pretty: None,
                 workspace_gid: workspace_gid.to_owned(),
             },

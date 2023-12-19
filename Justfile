@@ -1,5 +1,5 @@
 transform:
-    req https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml > openapi.yaml
+    test -e openapi.yaml || req https://raw.githubusercontent.com/Asana/openapi/master/defs/asana_oas.yaml > openapi.yaml
     cd transform && cargo run -- ../openapi.yaml ../transform.yaml
 
 generate:

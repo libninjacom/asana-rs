@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::{ProjectCompact, SectionBase};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct SectionResponse {
     #[serde(flatten)]
     pub section_base: SectionBase,

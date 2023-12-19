@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GoalRemoveSupportingRelationshipRequest {
     ///The gid of the supporting resource to remove from the parent goal. Must be the gid of a goal, project, task, or portfolio.
     pub supporting_resource: String,

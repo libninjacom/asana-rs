@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::UserCompact;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetUsersForWorkspaceResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<Vec<UserCompact>>,

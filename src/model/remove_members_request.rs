@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct RemoveMembersRequest {
     ///An array of strings identifying users. These can either be the string "me", an email, or the gid of a user.
     pub members: String,

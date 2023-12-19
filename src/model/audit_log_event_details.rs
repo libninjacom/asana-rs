@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///Event specific details. The schema will vary depending on the `event_type`.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AuditLogEventDetails {}
 impl std::fmt::Display for AuditLogEventDetails {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> Result<(), std::fmt::Error> {

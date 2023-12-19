@@ -9,17 +9,13 @@ use crate::AsanaClient;
 On request success, this will return a [`UpdatePortfolioResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct UpdatePortfolioRequest {
-    pub data: Option<PortfolioRequest>,
+    pub data: PortfolioRequest,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
     pub portfolio_gid: String,
 }
 impl UpdatePortfolioRequest {}
 impl FluentRequest<'_, UpdatePortfolioRequest> {
-    pub fn data(mut self, data: PortfolioRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -45,9 +41,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, UpdatePortfolioRequest>
                 "/portfolios/{portfolio_gid}", portfolio_gid = self.params.portfolio_gid
             );
             let mut r = self.client.client.put(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

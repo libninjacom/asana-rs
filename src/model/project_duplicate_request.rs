@@ -1,6 +1,5 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectDuplicateRequest {
     /**A comma-separated list of elements that will be duplicated to the new project. Tasks are always included.

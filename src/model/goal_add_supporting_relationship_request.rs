@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GoalAddSupportingRelationshipRequest {
     ///The weight that the supporting resource's progress will contribute to the supported goal's progress. This can only be 0 or 1.
     #[serde(skip_serializing_if = "Option::is_none")]

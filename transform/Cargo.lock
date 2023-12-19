@@ -157,6 +157,7 @@ name = "transform"
 version = "0.1.0"
 dependencies = [
  "openapiv3-extended",
+ "serde_json",
  "serde_yaml",
 ]
 

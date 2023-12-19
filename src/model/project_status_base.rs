@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectStatusCompact;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectStatusBase {
     #[serde(flatten)]
     pub project_status_compact: ProjectStatusCompact,

@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{UserBaseResponse, WorkspaceCompact};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct UserResponse {
     #[serde(flatten)]

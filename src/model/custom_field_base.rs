@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{CustomFieldCompact, EnumOption};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct CustomFieldBase {
     #[serde(flatten)]

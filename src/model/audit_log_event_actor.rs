@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///The entity that triggered the event. Will typically be a user.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct AuditLogEventActor {
     /**The type of actor.
 Can be one of `user`, `asana`, `asana_support`, `anonymous`, or `external_administrator`.*/

@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::ProjectBriefBase;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ProjectBriefRequest {
     #[serde(flatten)]
     pub project_brief_base: ProjectBriefBase,

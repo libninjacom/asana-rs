@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::MembershipRequest;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct CreateMembershipRequestBody {
     #[serde(flatten)]
     pub membership_request: MembershipRequest,

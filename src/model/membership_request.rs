@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct MembershipRequest {
     ///*Optional*. Denotes if a member is active. Applies to all memberships
     #[serde(skip_serializing_if = "Option::is_none")]

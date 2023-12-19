@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::TagBase;
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TagRequest {
     #[serde(flatten)]

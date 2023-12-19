@@ -9,16 +9,12 @@ use crate::AsanaClient;
 On request success, this will return a [`RemoveUserForWorkspaceResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct RemoveUserForWorkspaceRequest {
-    pub data: Option<WorkspaceRemoveUserRequest>,
+    pub data: WorkspaceRemoveUserRequest,
     pub opt_pretty: Option<bool>,
     pub workspace_gid: String,
 }
 impl RemoveUserForWorkspaceRequest {}
 impl FluentRequest<'_, RemoveUserForWorkspaceRequest> {
-    pub fn data(mut self, data: WorkspaceRemoveUserRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_pretty(mut self, opt_pretty: bool) -> Self {
         self.params.opt_pretty = Some(opt_pretty);
         self
@@ -34,9 +30,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, RemoveUserForWorkspaceR
                 .workspace_gid
             );
             let mut r = self.client.client.post(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_pretty {
                 r = r.query("opt_pretty", &unwrapped.to_string());
             }

@@ -9,17 +9,13 @@ use crate::AsanaClient;
 On request success, this will return a [`UpdateGoalResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct UpdateGoalRequest {
-    pub data: Option<GoalUpdateRequest>,
+    pub data: GoalUpdateRequest,
     pub goal_gid: String,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
 }
 impl UpdateGoalRequest {}
 impl FluentRequest<'_, UpdateGoalRequest> {
-    pub fn data(mut self, data: GoalUpdateRequest) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -43,9 +39,7 @@ impl<'a> ::std::future::IntoFuture for FluentRequest<'a, UpdateGoalRequest> {
         Box::pin(async move {
             let url = &format!("/goals/{goal_gid}", goal_gid = self.params.goal_gid);
             let mut r = self.client.client.put(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

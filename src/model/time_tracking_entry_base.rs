@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{TaskCompact, TimeTrackingEntryCompact};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TimeTrackingEntryBase {
     #[serde(flatten)]

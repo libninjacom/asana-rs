@@ -9,17 +9,13 @@ use crate::AsanaClient;
 On request success, this will return a [`UpdateTimeTrackingEntryResponse`].*/
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct UpdateTimeTrackingEntryRequest {
-    pub data: Option<UpdateTimeTrackingEntryRequestBody>,
+    pub data: UpdateTimeTrackingEntryRequestBody,
     pub opt_fields: Option<Vec<String>>,
     pub opt_pretty: Option<bool>,
     pub time_tracking_entry_gid: String,
 }
 impl UpdateTimeTrackingEntryRequest {}
 impl FluentRequest<'_, UpdateTimeTrackingEntryRequest> {
-    pub fn data(mut self, data: UpdateTimeTrackingEntryRequestBody) -> Self {
-        self.params.data = Some(data);
-        self
-    }
     pub fn opt_fields(
         mut self,
         opt_fields: impl IntoIterator<Item = impl AsRef<str>>,
@@ -47,9 +43,7 @@ for FluentRequest<'a, UpdateTimeTrackingEntryRequest> {
                 time_tracking_entry_gid = self.params.time_tracking_entry_gid
             );
             let mut r = self.client.client.put(url);
-            if let Some(ref unwrapped) = self.params.data {
-                r = r.json(json!({ "data" : unwrapped }));
-            }
+            r = r.json(json!({ "data" : self.params.data }));
             if let Some(ref unwrapped) = self.params.opt_fields {
                 for item in unwrapped {
                     r = r.query("opt_fields[]", &item.to_string());

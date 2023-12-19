@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{Like, StatusUpdateBase, UserCompact};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct StatusUpdateResponse {
     #[serde(flatten)]

@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::TeamBase;
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TeamRequest {
     #[serde(flatten)]
     pub team_base: TeamBase,

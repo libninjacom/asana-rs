@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct UpdateTimeTrackingEntryRequestBody {
     ///*Optional*. Time in minutes tracked by the entry
     #[serde(skip_serializing_if = "Option::is_none")]

@@ -6196,6 +6196,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/BatchRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully completed the requested batch API operations.
@@ -6208,6 +6210,8 @@ paths:
                     type: array
                     items:
                       $ref: '#/components/schemas/BatchResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -6874,6 +6878,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/CustomFieldRequest'
+              required:
+              - data
       responses:
         201:
           description: Custom field successfully created.
@@ -6884,6 +6890,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/CustomFieldResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -7295,6 +7303,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/CustomFieldRequest'
+              required:
+              - data
       responses:
         200:
           description: The custom field was successfully updated.
@@ -7305,6 +7315,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/CustomFieldResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -7773,6 +7785,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/EnumOptionRequest'
+              required:
+              - data
       responses:
         201:
           description: Custom field enum option successfully created.
@@ -7783,6 +7797,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EnumOption'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -7915,6 +7931,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/EnumOptionInsertRequest'
+              required:
+              - data
       responses:
         200:
           description: Custom field enum option successfully reordered.
@@ -7925,6 +7943,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EnumOption'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -8064,6 +8084,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/EnumOptionBase'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the specified custom field enum.
@@ -8074,6 +8096,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EnumOption'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -8558,6 +8582,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/GoalRelationshipRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the goal relationship.
@@ -8568,6 +8594,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/GoalRelationshipResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -8853,6 +8881,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/GoalAddSupportingRelationshipRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully created the goal relationship.
@@ -8863,6 +8893,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/GoalRelationshipResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -8963,6 +8995,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/GoalRemoveSupportingRelationshipRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the goal relationship.
@@ -8973,6 +9007,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -9380,6 +9416,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/GoalUpdateRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the goal.
@@ -9390,6 +9428,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/GoalResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -9980,6 +10020,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/GoalRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a new goal.
@@ -9990,6 +10032,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/GoalResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -10194,6 +10238,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/GoalMetricRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully created a new goal metric.
@@ -10204,6 +10250,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/GoalResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -10413,6 +10461,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/GoalMetricCurrentValueRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the goal metric.
@@ -10423,6 +10473,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/GoalResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -10631,6 +10683,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskAddFollowersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added users as collaborators.
@@ -10641,6 +10695,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/GoalResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -10849,6 +10905,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskAddFollowersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed users as collaborators.
@@ -10859,6 +10917,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/GoalResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -11451,6 +11511,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/CreateMembershipRequestBody'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the requested membership.
@@ -11461,6 +11523,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/MembershipResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -11752,6 +11816,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/OrganizationExportRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created organization export request.
@@ -11762,6 +11828,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/OrganizationExportResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -12945,6 +13013,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/PortfolioRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created portfolio.
@@ -12955,6 +13025,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/PortfolioResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -13570,6 +13642,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/PortfolioRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the portfolio.
@@ -13580,6 +13654,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/PortfolioResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -14192,6 +14268,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/PortfolioAddItemRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added the item to the portfolio.
@@ -14202,6 +14280,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -14329,6 +14409,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/PortfolioRemoveItemRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the item from the portfolio.
@@ -14339,6 +14421,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -14464,6 +14548,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/AddCustomFieldSettingRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added the custom field to the portfolio.
@@ -14474,6 +14560,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/CustomFieldSettingResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -14599,6 +14687,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/RemoveCustomFieldSettingRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the custom field from the portfolio.
@@ -14609,6 +14699,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -14933,6 +15025,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/AddMembersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added members to the portfolio.
@@ -14943,6 +15037,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/PortfolioResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -15254,6 +15350,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/RemoveMembersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the members from the portfolio.
@@ -15264,6 +15362,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/PortfolioResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -15546,6 +15646,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectBriefRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the project brief.
@@ -15556,6 +15658,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectBriefResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -15816,6 +15920,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectBriefRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a new project brief.
@@ -15826,6 +15932,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectBriefResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -16673,6 +16781,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectStatusRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a new story.
@@ -16683,6 +16793,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectStatusResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -17384,6 +17496,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectTemplateInstantiateProjectRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the job to handle project instantiation.
@@ -17394,6 +17508,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/JobResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -18159,6 +18275,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully retrieved projects.
@@ -18169,6 +18287,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -18900,6 +19020,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectUpdateRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the project.
@@ -18910,6 +19032,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -19179,6 +19303,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectDuplicateRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the job to handle duplication.
@@ -19189,6 +19315,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/JobResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -20309,6 +20437,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the specified project.
@@ -20319,6 +20449,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -21067,6 +21199,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a new project in the specified workspace.
@@ -21077,6 +21211,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -21292,6 +21428,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/AddCustomFieldSettingRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added the custom field to the project.
@@ -21302,6 +21440,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/CustomFieldSettingResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -21429,6 +21569,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/RemoveCustomFieldSettingRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the custom field from the project.
@@ -21439,6 +21581,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -21958,6 +22102,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/AddMembersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added members to the project.
@@ -21968,6 +22114,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -22335,6 +22483,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/RemoveMembersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the members from the project.
@@ -22345,6 +22495,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -22712,6 +22864,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/AddFollowersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added followers to the project.
@@ -22722,6 +22876,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -23089,6 +23245,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/RemoveFollowersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed followers from the project.
@@ -23099,6 +23257,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/ProjectResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -23251,6 +23411,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectSaveAsTemplateRequestBody'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the job to handle project template creation.
@@ -23261,6 +23423,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/JobResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -23372,6 +23536,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/RuleTriggerRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully triggered a rule.
@@ -23382,6 +23548,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/RuleTriggerResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -23621,6 +23789,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/SectionRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the specified section.
@@ -23631,6 +23801,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/SectionResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -24039,6 +24211,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/SectionRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the specified section.
@@ -24049,6 +24223,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/SectionResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -24165,6 +24341,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/SectionTaskInsertRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added the task.
@@ -24175,6 +24353,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -24291,6 +24471,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ProjectSectionInsertRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully moved the specified section.
@@ -24301,6 +24483,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -24954,6 +25138,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/StatusUpdateRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a new status update.
@@ -24964,6 +25150,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/StatusUpdateResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -25748,6 +25936,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/StoryRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully retrieved the specified story.
@@ -25758,6 +25948,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/StoryResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -26681,6 +26873,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/StoryRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a new story.
@@ -26691,6 +26885,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/StoryResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -26998,6 +27194,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TagRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the newly specified tag.
@@ -27008,6 +27206,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TagResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -27871,6 +28071,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TagCreateTagForWorkspaceRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the newly specified tag.
@@ -27881,6 +28083,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TagResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -28206,6 +28410,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskTemplateInstantiateTaskRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the job to handle task instantiation.
@@ -28216,6 +28422,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/JobResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -28874,6 +29082,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a new task.
@@ -28884,6 +29094,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TaskResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -29519,6 +29731,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the specified task.
@@ -29529,6 +29743,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TaskResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -29801,6 +30017,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskDuplicateRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the job to handle duplication.
@@ -29811,6 +30029,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/JobResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -31703,6 +31923,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the specified subtask.
@@ -31713,6 +31935,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TaskResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -32030,6 +32254,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskSetParentRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully changed the parent of the specified subtask.
@@ -32040,6 +32266,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TaskResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -32483,6 +32711,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ModifyDependenciesRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully set the specified dependencies on the task.
@@ -32493,6 +32723,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -32620,6 +32852,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ModifyDependenciesRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully unlinked the dependencies from the specified task.
@@ -32630,6 +32864,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -33088,6 +33324,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ModifyDependentsRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully set the specified dependents on the given task.
@@ -33098,6 +33336,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -33225,6 +33465,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/ModifyDependentsRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully unlinked the specified tasks as dependents.
@@ -33235,6 +33477,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -33376,6 +33620,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskAddProjectRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added the specified project to the task.
@@ -33386,6 +33632,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -33515,6 +33763,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskRemoveProjectRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the specified project from the task.
@@ -33525,6 +33775,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -33650,6 +33902,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskAddTagRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added the specified tag to the task.
@@ -33660,6 +33914,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -33785,6 +34041,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskRemoveTagRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the specified tag from the task.
@@ -33795,6 +34053,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -34128,6 +34388,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskAddFollowersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added the specified followers to the task.
@@ -34138,6 +34400,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TaskResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -34455,6 +34719,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TaskRemoveFollowersRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully removed the specified followers from the task.
@@ -34465,6 +34731,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TaskResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -35969,6 +36237,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TeamRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a new team.
@@ -35979,6 +36249,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TeamResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -36273,6 +36545,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TeamRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the team.
@@ -36283,6 +36557,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TeamResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -36747,6 +37023,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TeamAddUserRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully added user to the team.
@@ -36757,6 +37035,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TeamMembershipResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -36869,6 +37149,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/TeamRemoveUserRequest'
+              required:
+              - data
       responses:
         204:
           description: Returns an empty data record
@@ -36879,6 +37161,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -37446,6 +37730,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/CreateTimeTrackingEntryRequestBody'
+              required:
+              - data
       responses:
         201:
           description: Successfully created a time tracking entry for the task.
@@ -37456,6 +37742,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TimeTrackingEntryBase'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -37642,6 +37930,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/UpdateTimeTrackingEntryRequestBody'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the time tracking entry.
@@ -37652,6 +37942,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/TimeTrackingEntryBase'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -39301,6 +39593,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/WebhookRequest'
+              required:
+              - data
       responses:
         201:
           description: Successfully created the requested webhook.
@@ -39311,6 +39605,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/WebhookResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -39601,6 +39897,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/WebhookUpdateRequest'
+              required:
+              - data
       responses:
         200:
           description: Successfully updated the webhook.
@@ -39611,6 +39909,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/WebhookResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -40584,6 +40884,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/WorkspaceRequest'
+              required:
+              - data
       responses:
         200:
           description: Update for the workspace was successful.
@@ -40594,6 +40896,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/WorkspaceResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -40739,6 +41043,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/WorkspaceAddUserRequest'
+              required:
+              - data
       responses:
         200:
           description: The user was added successfully to the workspace or organization.
@@ -40749,6 +41055,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/UserBaseResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:
@@ -40864,6 +41172,8 @@ paths:
               properties:
                 data:
                   $ref: '#/components/schemas/WorkspaceRemoveUserRequest'
+              required:
+              - data
       responses:
         204:
           description: The user was removed successfully to the workspace or organization.
@@ -40874,6 +41184,8 @@ paths:
                 properties:
                   data:
                     $ref: '#/components/schemas/EmptyResponse'
+                required:
+                - data
         400:
           $ref: '#/components/responses/BadRequest'
         401:

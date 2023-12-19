@@ -1,6 +1,5 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///A response object returned from a batch request.
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct BatchResponse {

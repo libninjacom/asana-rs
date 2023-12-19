@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::{NextPage, WebhookResponse};
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetWebhooksResponse {
     #[serde(skip_serializing_if = "Option::is_none")]

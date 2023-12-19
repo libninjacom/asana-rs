@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
 use super::{NextPage, TeamCompact};
-use fake::Dummy;
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GetTeamsForUserResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub data: Option<Vec<TeamCompact>>,

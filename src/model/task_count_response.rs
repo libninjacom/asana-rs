@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///A response object returned from the task count endpoint.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct TaskCountResponse {
     ///The number of completed milestones in a project.
     #[serde(skip_serializing_if = "Option::is_none")]

@@ -1,7 +1,6 @@
 
 use serde::{Serialize, Deserialize};
 use super::AsanaResource;
-use fake::Dummy;
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct GoalCompact {
     ///A generic Asana Resource, containing a globally unique identifier.

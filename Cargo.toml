@@ -1,12 +1,12 @@
 [package]
 name = "asana2"
 edition = "2021"
-version = "0.1.0"
+version = "0.7.0"
+description = "Fluent OpenAPI client for Asana"
 homepage = "https://github.com/libninjacom/asana-rs"
 readme = "README.md"
-repository = "https://github.com/libninjacom/asana-rs"
-description = "Fluent OpenAPI client for Asana"
 license = "MIT"
+repository = "https://github.com/libninjacom/asana-rs"
 
 [dependencies]
 futures = "0.3.25"

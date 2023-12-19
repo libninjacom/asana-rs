@@ -1,8 +1,7 @@
 
 use serde::{Serialize, Deserialize};
-use fake::Dummy;
 ///A set of dependent tasks.
-#[derive(Debug, Clone, Serialize, Deserialize, Default, Dummy)]
+#[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct ModifyDependentsRequest {
     ///An array of task gids that are dependents of the given task.
     #[serde(skip_serializing_if = "Option::is_none")]

@@ -1,6 +1,5 @@
 use serde::{Serialize, Deserialize};
 use super::TaskBase;
-
 impl TaskRequest {
     pub fn new(name: impl Into<String>) -> Self {
         Self {

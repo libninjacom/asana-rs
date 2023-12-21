@@ -5,8 +5,8 @@ use asana::model::*;
 async fn main() {
     let client = AsanaClient::from_env();
     let data = SectionTaskInsertRequest {
-        insert_after: "your insert after".to_owned(),
-        insert_before: "your insert before".to_owned(),
+        insert_after: Some("your insert after".to_owned()),
+        insert_before: Some("your insert before".to_owned()),
         task: "your task".to_owned(),
     };
     let section_gid = "your section gid";

@@ -4,9 +4,11 @@ pub struct GoalAddSupportingRelationshipRequest {
     ///The weight that the supporting resource's progress will contribute to the supported goal's progress. This can only be 0 or 1.
     pub contribution_weight: f64,
     ///An id of a subgoal of this parent goal. The new subgoal will be added after the one specified here. `insert_before` and `insert_after` parameters cannot both be specified. Currently only supported when adding a subgoal.
-    pub insert_after: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub insert_after: Option<String>,
     ///An id of a subgoal of this parent goal. The new subgoal will be added before the one specified here. `insert_before` and `insert_after` parameters cannot both be specified. Currently only supported when adding a subgoal.
-    pub insert_before: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub insert_before: Option<String>,
     ///The gid of the supporting resource to add to the parent goal. Must be the gid of a goal, project, task, or portfolio.
     pub supporting_resource: String,
 }

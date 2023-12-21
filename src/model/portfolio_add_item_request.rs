@@ -2,9 +2,11 @@ use serde::{Serialize, Deserialize};
 #[derive(Debug, Clone, Serialize, Deserialize, Default)]
 pub struct PortfolioAddItemRequest {
     ///An id of an item in this portfolio. The new item will be added after the one specified here. `insert_before` and `insert_after` parameters cannot both be specified.
-    pub insert_after: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub insert_after: Option<String>,
     ///An id of an item in this portfolio. The new item will be added before the one specified here. `insert_before` and `insert_after` parameters cannot both be specified.
-    pub insert_before: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub insert_before: Option<String>,
     ///The item to add to the portfolio.
     pub item: String,
 }

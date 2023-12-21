@@ -6,8 +6,8 @@ async fn main() {
     let client = AsanaClient::from_env();
     let data = GoalAddSupportingRelationshipRequest {
         contribution_weight: 1.0,
-        insert_after: "your insert after".to_owned(),
-        insert_before: "your insert before".to_owned(),
+        insert_after: Some("your insert after".to_owned()),
+        insert_before: Some("your insert before".to_owned()),
         supporting_resource: "your supporting resource".to_owned(),
     };
     let goal_gid = "your goal gid";

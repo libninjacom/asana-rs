@@ -3,6 +3,16 @@ use std::fs::File;
 use serde_yaml::Value;
 use serde_yaml_ext::ValueExt;
 
+
+fn sanitize_keys(mut keys: Vec<Value>) -> Vec<Value> {
+    keys.retain(|k| ![
+        "section_before",
+        "section_after",
+        "insert_before",
+        "insert_after",
+    ].iter().any(|&s| k.as_str().unwrap() == s));
+    keys
+}
 // use as cargo run -- <input> <output>
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut args = env::args().skip(1);
@@ -12,11 +22,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let f = File::open(fpath)?;
     let mut spec: Value = serde_yaml::from_reader(f)?;
 
-    let rename_schema = |name: &str, path: &str, method: &str| {
+    let mut rename_schema = |name: &str, path: &str, method: &str| {
         let schemas = spec.path_mut("components.schemas");
         let schema = schemas.remove(name).unwrap();
         let new_name = format!("{}Body", name);
-        schemas.insert(&new_name, schema);
+        schemas.insert(new_name.clone(), schema);
         let path = format!("paths.{path}.{method}.requestBody.content.application/json.schema.properties.data");
         spec.path_mut(&path).insert("$ref", format!("#/components/schemas/{new_name}"));
     };
@@ -35,7 +45,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             let Some(req) = op.get_path_mut("requestBody.content.application/json.schema") else { continue; };
             if req.path("type") == "object" {
                 let keys = req.path("properties").keys().cloned().collect::<Vec<_>>();
-                res.insert("required", keys);
+                req.insert("required", sanitize_keys(keys));
             }
 
             let Some(res) = op.get_mut("responses") else { continue; };
@@ -43,7 +53,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 let Some(res) = res.get_path_mut("content.application/json.schema") else { continue; };
                 if res.path("type") == "object" {
                     let keys = res.path("properties").keys().cloned().collect::<Vec<_>>();
-                    res.insert("required", keys);
+                    res.insert("required", sanitize_keys(keys));
                 }
             }
         }
@@ -51,10 +61,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // do the same for schemas
     for schema in spec.path_mut("components.schemas").iter_mut() {
-        if schema.path("type") == "object" {
+        dbg!(&schema);
+        let Some(typ) = schema.get("type") else { continue; };
+        if typ == "object" {
             let Some(props) = schema.get_mut("properties") else { continue; };
             let keys = props.keys().cloned().collect::<Vec<_>>();
-            schema.insert("required", keys);
+            schema.insert("required", sanitize_keys(keys));
         }
     }
 

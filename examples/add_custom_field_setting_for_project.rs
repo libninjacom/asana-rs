@@ -6,8 +6,8 @@ async fn main() {
     let client = AsanaClient::from_env();
     let data = AddCustomFieldSettingRequest {
         custom_field: "your custom field".to_owned(),
-        insert_after: "your insert after".to_owned(),
-        insert_before: "your insert before".to_owned(),
+        insert_after: Some("your insert after".to_owned()),
+        insert_before: Some("your insert before".to_owned()),
         is_important: true,
     };
     let project_gid = "your project gid";

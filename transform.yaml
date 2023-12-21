@@ -909,8 +909,6 @@ components:
       required:
       - custom_field
       - is_important
-      - insert_before
-      - insert_after
       properties:
         custom_field:
           description: The custom field to associate with this container.
@@ -1951,8 +1949,6 @@ components:
       type: object
       required:
       - subgoal
-      - insert_before
-      - insert_after
       properties:
         subgoal:
           description: The goal gid to add as subgoal to a parent goal
@@ -2099,8 +2095,6 @@ components:
       type: object
       required:
       - supporting_resource
-      - insert_before
-      - insert_after
       - contribution_weight
       properties:
         supporting_resource:
@@ -2480,8 +2474,6 @@ components:
       type: object
       required:
       - item
-      - insert_before
-      - insert_after
       properties:
         item:
           description: The item to add to the portfolio.
@@ -3523,8 +3515,6 @@ components:
           example: '987654'
       required:
       - name
-      - insert_before
-      - insert_after
     SectionResponse:
       allOf:
       - $ref: '#/components/schemas/SectionBase'
@@ -3561,8 +3551,6 @@ components:
           example: '987654'
       required:
       - task
-      - insert_before
-      - insert_after
     StatusUpdateBase:
       allOf:
       - $ref: '#/components/schemas/StatusUpdateCompact'
@@ -4163,8 +4151,6 @@ components:
           example: '987654'
       required:
       - project
-      - insert_after
-      - insert_before
       - section
     TaskAddTagRequest:
       type: object
@@ -4781,8 +4767,6 @@ components:
           example: '124816'
       required:
       - parent
-      - insert_after
-      - insert_before
     TeamAddUserRequest:
       type: object
       description: A user identification object for specification with the addUser/removeUser endpoints.

@@ -5,14 +5,14 @@
         <img src="https://img.shields.io/github/stars/libninjacom/asana-rs.svg?style=flat-square" alt="Stars" />
     </a>
     <a href="https://github.com/libninjacom/asana-rs/actions">
-        <img src="https://img.shields.io/github/workflow/status/libninjacom/asana-rs/ci?style=flat-square" alt="Build Status" />
+        <img src="https://img.shields.io/github/actions/workflow/libninjacom/asana-rs/ci.yaml?style=flat-square" alt="Build Status" />
     </a>
     
 <a href="https://crates.io/crates/asana">
     <img src="https://img.shields.io/crates/d/asana?style=flat-square" alt="Downloads" />
 </a>
 <a href="https://crates.io/crates/asana">
-    <img src="https://img.shields.io/crates/v/asana?style=flat-square" alt="Crates.io" />
+    <img src="https://img.shields.io/crates/v/asana2?style=flat-square" alt="Crates.io" />
 </a>
 
 </p>

@@ -7228,6 +7228,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -7267,6 +7268,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling AttachmentsApi->get_attachment: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -7366,6 +7368,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -7402,6 +7405,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling AttachmentsApi->delete_attachment: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -7586,6 +7590,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -7628,6 +7633,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling AttachmentsApi->get_attachments_for_object: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -7809,6 +7815,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -7838,6 +7845,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling AttachmentsApi->create_attachment_for_object: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -8018,6 +8026,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -8065,6 +8074,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling AuditLogAPIApi->get_audit_log_events: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -8204,6 +8214,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -8244,6 +8255,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling BatchAPIApi->create_batch_request: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -8474,6 +8486,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -8516,6 +8529,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling CustomFieldSettingsApi->get_custom_field_settings_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -8742,6 +8756,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -8784,6 +8799,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling CustomFieldSettingsApi->get_custom_field_settings_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -9002,6 +9018,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -9041,6 +9058,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling CustomFieldsApi->create_custom_field: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -9247,6 +9265,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -9286,6 +9305,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling CustomFieldsApi->get_custom_field: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -9508,6 +9528,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -9548,6 +9569,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling CustomFieldsApi->update_custom_field: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -9652,6 +9674,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -9688,6 +9711,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling CustomFieldsApi->delete_custom_field: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -9901,6 +9925,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -9943,6 +9968,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling CustomFieldsApi->get_custom_fields_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -10089,6 +10115,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -10129,6 +10156,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling CustomFieldsApi->create_enum_option_for_custom_field: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -10271,6 +10299,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -10311,6 +10340,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling CustomFieldsApi->insert_enum_option_for_custom_field: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -10462,6 +10492,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -10502,6 +10533,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling CustomFieldsApi->update_enum_option: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -10733,6 +10765,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -10774,6 +10807,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling EventsApi->get_events: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -10909,6 +10943,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -10933,6 +10968,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalRelationshipsApi->get_goal_relationship: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -11083,6 +11119,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -11108,6 +11145,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalRelationshipsApi->update_goal_relationship: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -11273,6 +11311,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -11301,6 +11340,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling GoalRelationshipsApi->get_goal_relationships: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -11452,6 +11492,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -11477,6 +11518,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalRelationshipsApi->add_supporting_relationship: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -11592,6 +11634,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -11615,6 +11658,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalRelationshipsApi->remove_supporting_relationship: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -11814,6 +11858,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -11853,6 +11898,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalsApi->get_goal: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -12063,6 +12109,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -12103,6 +12150,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalsApi->update_goal: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -12204,6 +12252,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -12240,6 +12289,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalsApi->delete_goal: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -12503,6 +12553,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -12550,6 +12601,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling GoalsApi->get_goals: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -12759,6 +12811,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -12797,6 +12850,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalsApi->create_goal: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -13010,6 +13064,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -13050,6 +13105,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalsApi->create_goal_metric: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -13265,6 +13321,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -13305,6 +13362,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalsApi->update_goal_metric: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -13522,6 +13580,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -13562,6 +13621,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalsApi->add_followers: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -13776,6 +13836,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -13816,6 +13877,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling GoalsApi->remove_followers: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -14017,6 +14079,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -14057,6 +14120,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling GoalsApi->get_parent_goals_for_goal: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -14200,6 +14264,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -14239,6 +14304,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling JobsApi->get_job: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -14377,6 +14443,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -14405,6 +14472,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling MembershipsApi->get_memberships: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -14504,6 +14572,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -14527,6 +14596,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling MembershipsApi->create_membership: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -14647,6 +14717,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -14671,6 +14742,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling MembershipsApi->get_membership: %s\n" % e)
+            name: python-sdk-v5
     delete:
       summary: Delete a membership
       description: |-
@@ -14721,6 +14793,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -14743,6 +14816,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling MembershipsApi->delete_membership: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -14883,6 +14957,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -14922,6 +14997,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling OrganizationExportsApi->create_organization_export: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -15051,6 +15127,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -15090,6 +15167,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling OrganizationExportsApi->get_organization_export: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -15239,6 +15317,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -15283,6 +15362,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling PortfolioMembershipsApi->get_portfolio_memberships: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -15411,6 +15491,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -15450,6 +15531,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfolioMembershipsApi->get_portfolio_membership: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -15597,6 +15679,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -15640,6 +15723,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling PortfolioMembershipsApi->get_portfolio_memberships_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -15980,6 +16064,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -16023,6 +16108,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->get_portfolios: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -16341,6 +16427,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -16380,6 +16467,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->create_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -16682,6 +16770,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -16721,6 +16810,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->get_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -17037,6 +17127,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -17077,6 +17168,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->update_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -17177,6 +17269,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -17213,6 +17306,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->delete_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -17585,6 +17679,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -17627,6 +17722,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->get_items_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -17744,6 +17840,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -17782,6 +17879,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->add_item_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -17898,6 +17996,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -17936,6 +18035,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->remove_item_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -18052,6 +18152,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -18090,6 +18191,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->add_custom_field_setting_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -18205,6 +18307,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -18243,6 +18346,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->remove_custom_field_setting_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -18562,6 +18666,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -18602,6 +18707,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->add_members_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -18921,6 +19027,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -18961,6 +19068,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling PortfoliosApi->remove_members_for_portfolio: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -19102,6 +19210,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -19141,6 +19250,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectBriefsApi->get_project_brief: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -19287,6 +19397,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -19327,6 +19438,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectBriefsApi->update_project_brief: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -19428,6 +19540,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -19464,6 +19577,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectBriefsApi->delete_project_brief: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -19612,6 +19726,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -19652,6 +19767,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectBriefsApi->create_project_brief: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -19792,6 +19908,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -19831,6 +19948,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectMembershipsApi->get_project_membership: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -19980,6 +20098,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -20023,6 +20142,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling ProjectMembershipsApi->get_project_memberships_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -20165,6 +20285,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -20204,6 +20325,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectStatusesApi->get_project_status: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -20307,6 +20429,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -20343,6 +20466,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectStatusesApi->delete_project_status: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -20500,6 +20624,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -20542,6 +20667,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling ProjectStatusesApi->get_project_statuses_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -20695,6 +20821,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -20735,6 +20862,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectStatusesApi->create_project_status_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -20881,6 +21009,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -20920,6 +21049,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectTemplatesApi->get_project_template: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -21010,6 +21140,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -21032,6 +21163,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectTemplatesApi->delete_project_template: %s\n" % e)
+            name: python-sdk-v5
   /project_templates:
     parameters:
       - $ref: '#/components/parameters/pretty'
@@ -21158,6 +21290,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -21201,6 +21334,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling ProjectTemplatesApi->get_project_templates: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -21361,6 +21495,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -21403,6 +21538,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling ProjectTemplatesApi->get_project_templates_for_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -21575,6 +21711,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -21615,6 +21752,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectTemplatesApi->instantiate_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -22009,6 +22147,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -22053,6 +22192,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->get_projects: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -22430,6 +22570,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -22469,6 +22610,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->create_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -22827,6 +22969,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -22866,6 +23009,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->get_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -23242,6 +23386,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -23282,6 +23427,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->update_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -23382,6 +23528,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -23418,6 +23565,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->delete_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -23573,6 +23721,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -23613,6 +23762,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->duplicate_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -23987,6 +24137,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -24029,6 +24180,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->get_projects_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -24404,6 +24556,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -24447,6 +24600,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->get_projects_for_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -24817,6 +24971,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -24857,6 +25012,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->create_project_for_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -25236,6 +25392,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -25279,6 +25436,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->get_projects_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -25654,6 +25812,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -25694,6 +25853,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->create_project_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -25916,6 +26076,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -25956,6 +26117,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->add_custom_field_setting_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -26071,6 +26233,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -26109,6 +26272,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->remove_custom_field_setting_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -26254,6 +26418,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -26293,6 +26458,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->get_task_counts_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -26672,6 +26838,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -26712,6 +26879,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->add_members_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -27086,6 +27254,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -27126,6 +27295,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->remove_members_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -27504,6 +27674,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -27544,6 +27715,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->add_followers_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -27919,6 +28091,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -27959,6 +28132,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->remove_followers_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -28121,6 +28295,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -28161,6 +28336,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling ProjectsApi->project_save_as_template: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -28261,6 +28437,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -28284,6 +28461,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling RulesApi->trigger_rule: %s\n" % e)
+            name: python-sdk-v5
   /sections/{section_gid}:
     parameters:
       - $ref: '#/components/parameters/section_path_gid'
@@ -28377,6 +28555,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -28416,6 +28595,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling SectionsApi->get_section: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -28564,6 +28744,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -28604,6 +28785,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling SectionsApi->update_section: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -28708,6 +28890,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -28744,6 +28927,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling SectionsApi->delete_section: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -28888,6 +29072,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -28930,6 +29115,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling SectionsApi->get_sections_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -29071,6 +29257,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -29111,6 +29298,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling SectionsApi->create_section_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -29229,6 +29417,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -29268,6 +29457,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling SectionsApi->add_task_for_section: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -29387,6 +29577,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -29426,6 +29617,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling SectionsApi->insert_section_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -29591,6 +29783,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -29630,6 +29823,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling StatusUpdatesApi->get_status: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -29729,6 +29923,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -29765,6 +29960,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling StatusUpdatesApi->delete_status: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -29962,6 +30158,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -30005,6 +30202,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling StatusUpdatesApi->get_statuses_for_object: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -30182,6 +30380,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -30223,6 +30422,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling StatusUpdatesApi->create_status_for_object: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -30611,6 +30811,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -30650,6 +30851,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling StoriesApi->get_story: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -31051,6 +31253,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -31091,6 +31294,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling StoriesApi->update_story: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -31190,6 +31394,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -31226,6 +31431,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling StoriesApi->delete_story: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -31628,6 +31834,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -31670,6 +31877,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling StoriesApi->get_stories_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -32072,6 +32280,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -32112,6 +32321,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling StoriesApi->create_story_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -32270,6 +32480,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -32311,6 +32522,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TagsApi->get_tags: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -32463,6 +32675,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -32501,6 +32714,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TagsApi->create_tag: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -32637,6 +32851,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -32676,6 +32891,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TagsApi->get_tag: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -32818,6 +33034,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -32857,6 +33074,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TagsApi->update_tag: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -32957,6 +33175,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -32993,6 +33212,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TagsApi->delete_tag: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -33143,6 +33363,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -33185,6 +33406,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TagsApi->get_tags_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -33337,6 +33559,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -33379,6 +33602,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TagsApi->get_tags_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -33532,6 +33756,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -33572,6 +33797,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TagsApi->create_tag_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -33702,6 +33928,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -33729,6 +33956,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TaskTemplatesApi->get_task_templates: %s\n" % e)
+            name: python-sdk-v5
   /task_templates/{task_template_gid}:
     parameters:
       - $ref: '#/components/parameters/task_template_path_gid'
@@ -33807,6 +34035,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -33831,6 +34060,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TaskTemplatesApi->get_task_template: %s\n" % e)
+            name: python-sdk-v5
   /task_templates/{task_template_gid}/instantiateTask:
     parameters:
       - $ref: '#/components/parameters/task_template_path_gid'
@@ -33935,6 +34165,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -33960,6 +34191,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TaskTemplatesApi->instantiate_task: %s\n" % e)
+            name: python-sdk-v5
   /tasks:
     parameters:
       - $ref: '#/components/parameters/pretty'
@@ -34322,6 +34554,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -34368,6 +34601,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_tasks: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -34693,6 +34927,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -34731,6 +34966,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->create_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -35041,6 +35277,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -35080,6 +35317,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -35408,6 +35646,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -35448,6 +35687,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->update_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -35550,6 +35790,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -35586,6 +35827,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->delete_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -35742,6 +35984,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -35782,6 +36025,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->duplicate_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -36111,6 +36355,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -36154,6 +36399,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_tasks_for_project: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -36483,6 +36729,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -36526,6 +36773,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_tasks_for_section: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -36853,6 +37101,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -36895,6 +37144,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_tasks_for_tag: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -37234,6 +37484,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -37277,6 +37528,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_tasks_for_user_task_list: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -37604,6 +37856,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -37646,6 +37899,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_subtasks_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -37967,6 +38221,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -38007,6 +38262,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->create_subtask_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -38333,6 +38589,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -38373,6 +38630,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->set_parent_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -38700,6 +38958,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -38742,6 +39001,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_dependencies_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -38860,6 +39120,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -38898,6 +39159,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->add_dependencies_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -39014,6 +39276,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -39052,6 +39315,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->remove_dependencies_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -39380,6 +39644,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -39422,6 +39687,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->get_dependents_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -39540,6 +39806,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -39578,6 +39845,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->add_dependents_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -39695,6 +39963,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -39733,6 +40002,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->remove_dependents_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -39861,6 +40131,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -39899,6 +40170,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->add_project_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -40017,6 +40289,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -40055,6 +40328,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->remove_project_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -40170,6 +40444,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -40208,6 +40483,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->add_tag_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -40323,6 +40599,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -40361,6 +40638,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->remove_tag_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -40691,6 +40969,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -40731,6 +41010,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->add_followers_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -41057,6 +41337,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -41097,6 +41378,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TasksApi->remove_follower_for_task: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -41973,6 +42255,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -42072,6 +42355,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TasksApi->search_tasks_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -42206,6 +42490,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -42245,6 +42530,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TeamMembershipsApi->get_team_membership: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -42420,6 +42706,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -42464,6 +42751,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TeamMembershipsApi->get_team_memberships: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -42612,6 +42900,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -42654,6 +42943,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TeamMembershipsApi->get_team_memberships_for_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -42813,6 +43103,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -42856,6 +43147,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TeamMembershipsApi->get_team_memberships_for_user: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -43014,6 +43306,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -43052,6 +43345,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TeamsApi->create_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -43196,6 +43490,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -43235,6 +43530,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TeamsApi->get_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -43389,6 +43685,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -43414,6 +43711,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TeamsApi->update_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -43576,6 +43874,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -43618,6 +43917,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TeamsApi->get_teams_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -43787,6 +44087,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -43830,6 +44131,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TeamsApi->get_teams_for_user: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -43983,6 +44285,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -44023,6 +44326,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TeamsApi->add_user_for_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -44139,6 +44443,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -44177,6 +44482,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TeamsApi->remove_user_for_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -44313,6 +44619,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -44352,6 +44659,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TimePeriodsApi->get_time_period: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -44529,6 +44837,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -44573,6 +44882,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TimePeriodsApi->get_time_periods: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -44700,6 +45010,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -44727,6 +45038,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TimeTrackingEntriesApi->get_time_tracking_entries_for_task: %s\n" % e)
+            name: python-sdk-v5
     post:
       summary: Create a time tracking entry
       description: |-
@@ -44822,6 +45134,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -44847,6 +45160,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TimeTrackingEntriesApi->create_time_tracking_entry: %s\n" % e)
+            name: python-sdk-v5
   /time_tracking_entries/{time_tracking_entry_gid}:
     parameters:
       - $ref: '#/components/parameters/time_tracking_entry_path_gid'
@@ -44933,6 +45247,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -44957,6 +45272,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TimeTrackingEntriesApi->get_time_tracking_entry: %s\n" % e)
+            name: python-sdk-v5
     put:
       summary: Update a time tracking entry
       description: |-
@@ -45058,6 +45374,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -45083,6 +45400,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TimeTrackingEntriesApi->update_time_tracking_entry: %s\n" % e)
+            name: python-sdk-v5
     delete:
       summary: Delete a time tracking entry
       description: |-
@@ -45132,6 +45450,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: python
             install: pip install asana
             code: |-
@@ -45154,6 +45473,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling TimeTrackingEntriesApi->delete_time_tracking_entry: %s\n" % e)
+            name: python-sdk-v5
   /workspaces/{workspace_gid}/typeahead:
     parameters:
       - $ref: '#/components/parameters/workspace_path_gid'
@@ -45336,6 +45656,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -45380,6 +45701,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling TypeaheadApi->typeahead_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -45508,6 +45830,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -45547,6 +45870,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling UserTaskListsApi->get_user_task_list: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -45685,6 +46009,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -45725,6 +46050,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling UserTaskListsApi->get_user_task_list_for_user: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -45900,6 +46226,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -45942,6 +46269,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling UsersApi->get_users: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -46083,6 +46411,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -46122,6 +46451,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling UsersApi->get_user: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -46285,6 +46615,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -46329,6 +46660,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling UsersApi->get_favorites_for_user: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -46480,6 +46812,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -46521,6 +46854,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling UsersApi->get_users_for_team: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -46671,6 +47005,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -46712,6 +47047,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling UsersApi->get_users_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -46885,6 +47221,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -46928,6 +47265,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling WebhooksApi->get_webhooks: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -47136,6 +47474,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -47175,6 +47514,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WebhooksApi->create_webhook: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -47319,6 +47659,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -47358,6 +47699,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WebhooksApi->get_webhook: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -47513,6 +47855,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -47553,6 +47896,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WebhooksApi->update_webhook: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -47652,6 +47996,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -47688,6 +48033,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WebhooksApi->delete_webhook: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -47837,6 +48183,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -47876,6 +48223,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WorkspaceMembershipsApi->get_workspace_membership: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -48042,6 +48390,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -48084,6 +48433,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling WorkspaceMembershipsApi->get_workspace_memberships_for_user: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -48242,6 +48592,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -48285,6 +48636,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling WorkspaceMembershipsApi->get_workspace_memberships_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -48424,6 +48776,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -48465,6 +48818,7 @@ paths:
                       pprint(data)
               except ApiException as e:
                   print("Exception when calling WorkspacesApi->get_workspaces: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -48590,6 +48944,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -48629,6 +48984,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WorkspacesApi->get_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -48770,6 +49126,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -48810,6 +49167,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WorkspacesApi->update_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -48964,6 +49322,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -49004,6 +49363,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WorkspacesApi->add_user_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-
@@ -49124,6 +49484,7 @@ paths:
               }, (error) => {
                   console.error(error.response.body);
               });
+            name: node-sdk-v3
           - language: node
             install: npm install asana@1.0.2
             code: >-
@@ -49162,6 +49523,7 @@ paths:
                   pprint(api_response)
               except ApiException as e:
                   print("Exception when calling WorkspacesApi->remove_user_for_workspace: %s\n" % e)
+            name: python-sdk-v5
           - language: python
             install: pip install asana==3.2.2
             code: >-

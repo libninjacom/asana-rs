@@ -1,7 +1,7 @@
 [package]
 name = "asana2"
 edition = "2021"
-version = "0.4.0"
+version = "0.5.0"
 description = "Fluent OpenAPI client for Asana"
 homepage = "https://github.com/libninjacom/asana-rs"
 readme = "README.md"
@@ -9,8 +9,10 @@ license = "MIT"
 repository = "https://github.com/libninjacom/asana-rs"
 
 [dependencies]
+base64 = "0.21.0"
 futures = "0.3.25"
-httpclient = "0.19.0"
+httpclient = "0.20.0"
+httpclient_oauth2 = "0.1.0"
 indexmap = "2.1.0"
 serde_json = "1.0.81"
 serde_path_to_error = "0.1.14"
@@ -23,10 +25,6 @@ features = ["serde"]
 [dependencies.fake]
 version = "2.9"
 features = ["derive", "chrono", "rust_decimal", "http", "uuid"]
-
-[dependencies.openapiv3-extended]
-version = "3.1.4"
-features = ["v2"]
 
 [dependencies.serde]
 version = "1.0.193"

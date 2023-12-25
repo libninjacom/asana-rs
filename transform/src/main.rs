@@ -61,7 +61,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     // do the same for schemas
     for schema in spec.path_mut("components.schemas").iter_mut() {
-        dbg!(&schema);
         let Some(typ) = schema.get("type") else { continue; };
         if typ == "object" {
             let Some(props) = schema.get_mut("properties") else { continue; };

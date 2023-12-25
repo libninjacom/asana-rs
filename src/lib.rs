@@ -6,51 +6,87 @@
 pub mod model;
 pub mod request;
 pub use httpclient::{Error, Result, InMemoryResponseExt};
+use std::sync::{Arc, OnceLock};
 use crate::model::*;
+use base64::{Engine, engine::general_purpose::STANDARD_NO_PAD};
 mod serde;
+static SHARED_HTTPCLIENT: OnceLock<httpclient::Client> = OnceLock::new();
+pub fn default_http_client() -> httpclient::Client {
+    httpclient::Client::new().base_url("https://app.asana.com/api/1.0")
+}
+/// Use this method if you want to add custom middleware to the httpclient.
+/// Example usage:
+///
+/// ```
+/// init_http_client(|| {
+///     default_http_client()
+///         .with_middleware(..)
+///  });
+/// ```
+pub fn init_http_client(init: fn() -> httpclient::Client) {
+    SHARED_HTTPCLIENT.get_or_init(init);
+}
+fn shared_http_client() -> &'static httpclient::Client {
+    SHARED_HTTPCLIENT.get_or_init(default_http_client)
+}
+static SHARED_OAUTH2FLOW: OnceLock<httpclient_oauth2::OAuth2Flow> = OnceLock::new();
+pub fn init_oauth2_flow(init: fn() -> httpclient_oauth2::OAuth2Flow) {
+    SHARED_OAUTH2FLOW.get_or_init(init);
+}
+fn shared_oauth2_flow() -> &'static httpclient_oauth2::OAuth2Flow {
+    let client_id = std::env::var("ASANA_CLIENT_ID")
+        .expect("ASANA_CLIENT_ID must be set");
+    let client_secret = std::env::var("ASANA_CLIENT_SECRET")
+        .expect("ASANA_CLIENT_SECRET must be set");
+    let redirect_uri = std::env::var("ASANA_REDIRECT_URI")
+        .expect("ASANA_REDIRECT_URI must be set");
+    SHARED_OAUTH2FLOW
+        .get_or_init(|| httpclient_oauth2::OAuth2Flow {
+            client_id,
+            client_secret,
+            init_endpoint: "https://app.asana.com/-/oauth_authorize".to_string(),
+            exchange_endpoint: "https://app.asana.com/-/oauth_token".to_string(),
+            refresh_endpoint: "https://app.asana.com/-/oauth_token".to_string(),
+            redirect_uri,
+        })
+}
 #[derive(Clone)]
 pub struct FluentRequest<'a, T> {
     pub(crate) client: &'a AsanaClient,
     pub params: T,
 }
 pub struct AsanaClient {
-    pub client: httpclient::Client,
-    authentication: AsanaAuthentication,
+    client: &'static httpclient::Client,
+    authentication: AsanaAuth,
 }
 impl AsanaClient {
     pub fn from_env() -> Self {
         Self {
-            client: httpclient::Client::new().base_url("https://app.asana.com/api/1.0"),
-            authentication: AsanaAuthentication::from_env(),
+            client: shared_http_client(),
+            authentication: AsanaAuth::from_env(),
+        }
+    }
+    pub fn with_auth(authentication: AsanaAuth) -> Self {
+        Self {
+            client: shared_http_client(),
+            authentication,
         }
     }
 }
 impl AsanaClient {
-    pub fn new(url: &str, authentication: AsanaAuthentication) -> Self {
-        let client = httpclient::Client::new().base_url(url);
-        Self { client, authentication }
-    }
-    pub fn with_authentication(mut self, authentication: AsanaAuthentication) -> Self {
-        self.authentication = authentication;
-        self
-    }
     pub(crate) fn authenticate<'a>(
         &self,
         mut r: httpclient::RequestBuilder<'a>,
     ) -> httpclient::RequestBuilder<'a> {
         match &self.authentication {
-            AsanaAuthentication::PersonalAccessToken { personal_access_token } => {
+            AsanaAuth::PersonalAccessToken { personal_access_token } => {
                 r = r.bearer_auth(personal_access_token);
+            }
+            AsanaAuth::OAuth2 { middleware } => {
+                r.middlewares.insert(0, middleware.clone());
             }
         }
         r
-    }
-    pub fn with_middleware<M: httpclient::Middleware + 'static>(
-        mut self,
-        middleware: M,
-    ) -> Self {
-        self.client = self.client.with_middleware(middleware);
-        self
     }
     /**Get an attachment
 
@@ -3644,14 +3680,26 @@ Returns an empty data record.*/
         }
     }
 }
-pub enum AsanaAuthentication {
+pub enum AsanaAuth {
     PersonalAccessToken { personal_access_token: String },
+    OAuth2 { middleware: Arc<httpclient_oauth2::OAuth2> },
 }
-impl AsanaAuthentication {
+impl AsanaAuth {
     pub fn from_env() -> Self {
         Self::PersonalAccessToken {
             personal_access_token: std::env::var("ASANA_PERSONAL_ACCESS_TOKEN")
-                .expect("Environment variable PERSONAL_ACCESS_TOKEN is not set."),
+                .expect("Environment variable ASANA_PERSONAL_ACCESS_TOKEN is not set."),
+        }
+    }
+    pub fn oauth2(access: String, refresh: String) -> Self {
+        let mw = shared_oauth2_flow()
+            .middleware_from_pieces(
+                access,
+                refresh,
+                httpclient_oauth2::TokenType::Bearer,
+            );
+        Self::OAuth2 {
+            middleware: Arc::new(mw),
         }
     }
 }

@@ -1,2 +1,2 @@
-[patch.crates-io]
-serde_yaml_ext = { path = "../../serde_yaml_ext" }
+#[patch.crates-io]
+#serde_yaml_ext = { path = "../../serde_yaml_ext" }

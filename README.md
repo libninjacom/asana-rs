@@ -5,7 +5,7 @@
         <img src="https://img.shields.io/github/stars/libninjacom/asana-rs.svg?style=flat-square" alt="Stars" />
     </a>
     <a href="https://github.com/libninjacom/asana-rs/actions">
-        <img src="https://img.shields.io/github/actions/workflow/libninjacom/asana-rs/ci.yaml?branch=master&style=flat-square" alt="Build Status" />
+        <img src="https://img.shields.io/github/actions/workflow/status/libninjacom/asana-rs/ci.yaml?style=flat-square" alt="Build Status" />
     </a>
     
 <a href="https://crates.io/crates/asana">

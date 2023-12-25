@@ -23,8 +23,6 @@ Asana client, generated from the OpenAPI spec.
 
 See examples/ directory for usage.
 
-This example loads configuration from environment variables, specifically:
-
 # Installation
 
 Add this to your Cargo.toml:
@@ -33,7 +31,6 @@ Add this to your Cargo.toml:
 [dependencies]
 asana2 = ".."
 ```
-
 
 # Documentation
 
